@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg:svg PUBLIC "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" "-//W3C//DTD SVG 1.0//EN">
+<svg:svg xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 200 200" preserveAspectRatio="xMinYMid" height="100%" width="100%" version="1.1">
+<svg:g transform="translate(0 100) scale(1 -1)">
+<svg:circle r="1" cy="0" cx="15"/>
+<svg:g transform="translate(0 100) scale(1 -1)">
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="100" dx="5">0</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="100" x2="280" y1="100" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="91.42857142857143" dx="5">6</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="91.42857142857143" x2="280" y1="91.42857142857143" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="82.85714285714286" dx="5">12</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="82.85714285714286" x2="280" y1="82.85714285714286" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="74.28571428571429" dx="5">18</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="74.28571428571429" x2="280" y1="74.28571428571429" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="65.71428571428572" dx="5">24</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="65.71428571428572" x2="280" y1="65.71428571428572" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="57.142857142857146" dx="5">30</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="57.142857142857146" x2="280" y1="57.142857142857146" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="48.57142857142857" dx="5">36</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="48.57142857142857" x2="280" y1="48.57142857142857" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="40" dx="5">42</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="40" x2="280" y1="40" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="31.42857142857143" dx="5">48</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="31.42857142857143" x2="280" y1="31.42857142857143" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="22.857142857142858" dx="5">54</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="22.857142857142858" x2="280" y1="22.857142857142858" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="14.285714285714286" dx="5">60</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="14.285714285714286" x2="280" y1="14.285714285714286" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="5.714285714285714" dx="5">66</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="5.714285714285714" x2="280" y1="5.714285714285714" x1="15"/>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" y="-2.857142857142857" dx="5">72</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="-2.857142857142857" x2="280" y1="-2.857142857142857" x1="15"/>
+</svg:g>
+<svg:line stroke-width="2" stroke="black" y2="100" x2="15" y1="0" x1="15"/>
+<svg:g transform="scale(1 -1)">
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="22.5" writing-mode="tb">ABCDE</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="37.5" writing-mode="tb">BCDEF</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="52.5" writing-mode="tb">CDEFG</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="67.5" writing-mode="tb">DEFGH</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="82.5" writing-mode="tb">EFGHI</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="97.5" writing-mode="tb">FGHIJ</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="112.5" writing-mode="tb">GHIJK</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="127.5" writing-mode="tb">HIJKL</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="142.5" writing-mode="tb">IJKLM</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="157.5" writing-mode="tb">JKLMN</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="172.5" writing-mode="tb">KLMNO</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="187.5" writing-mode="tb">LMNOP</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="202.5" writing-mode="tb">MNOPQ</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="217.5" writing-mode="tb">NOPQR</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="232.5" writing-mode="tb">OPQRS</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="247.5" writing-mode="tb">PQRST</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="serif" fill="black" dy="5" x="262.5" writing-mode="tb">QRSTU</svg:text>
+</svg:g>
+<svg:line stroke-width="2" stroke="black" y2="0" x2="280" y1="0" x1="15"/>
+<svg:rect stroke-width="1" stroke="black" fill="orangered" height="42.85714285714286" width="15" ry="2" rx="2" y="0" x="15"/>
+<svg:rect stroke-width="1" stroke="black" fill="olivedrab" height="28.571428571428573" width="15" ry="2" rx="2" y="0" x="30"/>
+<svg:rect stroke-width="1" stroke="black" fill="brown" height="71.42857142857143" width="15" ry="2" rx="2" y="0" x="45"/>
+<svg:rect stroke-width="1" stroke="black" fill="limegreen" height="21.42857142857143" width="15" ry="2" rx="2" y="0" x="60"/>
+<svg:rect stroke-width="1" stroke="black" fill="hotpink" height="27.142857142857142" width="15" ry="2" rx="2" y="0" x="75"/>
+<svg:rect stroke-width="1" stroke="black" fill="maroon" height="17.142857142857142" width="15" ry="2" rx="2" y="0" x="90"/>
+<svg:rect stroke-width="1" stroke="black" fill="steelblue" height="37.142857142857146" width="15" ry="2" rx="2" y="0" x="105"/>
+<svg:rect stroke-width="1" stroke="black" fill="olive" height="41.42857142857143" width="15" ry="2" rx="2" y="0" x="120"/>
+<svg:rect stroke-width="1" stroke="black" fill="purple" height="45.714285714285715" width="15" ry="2" rx="2" y="0" x="135"/>
+<svg:rect stroke-width="1" stroke="black" fill="yellow" height="42.85714285714286" width="15" ry="2" rx="2" y="0" x="150"/>
+<svg:rect stroke-width="1" stroke="black" fill="yellowgreen" height="50" width="15" ry="2" rx="2" y="0" x="165"/>
+<svg:rect stroke-width="1" stroke="black" fill="red" height="64.28571428571429" width="15" ry="2" rx="2" y="0" x="180"/>
+<svg:rect stroke-width="1" stroke="black" fill="wheat" height="32.85714285714286" width="15" ry="2" rx="2" y="0" x="195"/>
+<svg:rect stroke-width="1" stroke="black" fill="darkgreen" height="14.285714285714286" width="15" ry="2" rx="2" y="0" x="210"/>
+<svg:rect stroke-width="1" stroke="black" fill="black" height="14.285714285714286" width="15" ry="2" rx="2" y="0" x="225"/>
+<svg:rect stroke-width="1" stroke="black" fill="indigo" height="31.42857142857143" width="15" ry="2" rx="2" y="0" x="240"/>
+<svg:rect stroke-width="1" stroke="black" fill="darkblue" height="11.428571428571429" width="15" ry="2" rx="2" y="0" x="255"/>
+</svg:g>
+</svg:svg>

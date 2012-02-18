@@ -1,1 +1,1 @@
-Utility XSL templates to generate SVG charts. Can be used along with XSL-FO to embed dynamic charts.
+Utility XSL templates to generate SVG charts. Can be used in HTML or along with XSL-FO to embed dynamic charts in PDF.

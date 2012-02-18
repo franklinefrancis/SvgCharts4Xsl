@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <datum><x>ABCDE</x><y>30</y></datum>
+  <datum><x>BCDEF</x><y>20</y></datum>
+  <datum><x>CDEFG</x><y>50</y></datum>
+  <datum><x>DEFGH</x><y>15</y></datum>
+  <datum><x>EFGHI</x><y>19</y></datum>
+  <datum><x>FGHIJ</x><y>12</y></datum>
+  <datum><x>GHIJK</x><y>26</y></datum>
+  <datum><x>HIJKL</x><y>29</y></datum>
+  <datum><x>IJKLM</x><y>32</y></datum>
+  <datum><x>JKLMN</x><y>30</y></datum>
+  <datum><x>KLMNO</x><y>35</y></datum>
+  <datum><x>LMNOP</x><y>45</y></datum>
+  <datum><x>MNOPQ</x><y>23</y></datum>
+  <datum><x>NOPQR</x><y>10</y></datum>
+  <datum><x>OPQRS</x><y>10</y></datum>
+  <datum><x>PQRST</x><y>22</y></datum>
+  <datum><x>QRSTU</x><y>8</y></datum>
+</data>
