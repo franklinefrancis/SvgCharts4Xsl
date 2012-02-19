@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg:svg PUBLIC "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" "-//W3C//DTD SVG 1.0//EN">
+<svg:svg xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMinYMid" height="100%" width="100%" version="1.1">
+<svg:circle r="1" cy="118" cx="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="120.5" x="15">0</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="118" x2="360" y1="118" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="111.5" x="15">82</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="109" x2="360" y1="109" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="102.5" x="15">164</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="100" x2="360" y1="100" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="93.5" x="15">246</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="91" x2="360" y1="91" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="83.5" x="15">328</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="81" x2="360" y1="81" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="74.5" x="15">410</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="72" x2="360" y1="72" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="65.5" x="15">492</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="63" x2="360" y1="63" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="56.5" x="15">574</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="54" x2="360" y1="54" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="47.5" x="15">656</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="45" x2="360" y1="45" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="37.5" x="15">738</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="35" x2="360" y1="35" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="28.5" x="15">820</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="26" x2="360" y1="26" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="19.5" x="15">902</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="17" x2="360" y1="17" x1="20"/>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="10.5" x="15">984</svg:text>
+<svg:line stroke-width="0.25" stroke="grey" y2="8" x2="360" y1="8" x1="20"/>
+<svg:g transform="translate(0 118) scale(1 -1)">
+<svg:line stroke-width="2" stroke="black" y2="118" x2="20" y1="0" x1="20"/>
+</svg:g>
+<svg:g transform="translate(0 118) scale(1 -1)">
+<svg:line stroke-width="1" stroke="black" y2="59.48372615039282" x2="42.5" y1="37.71043771043771" x1="27.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="37.71043771043771" cx="27.5"/>
+<svg:line stroke-width="1" stroke="black" y2="14.590347923681257" x2="57.5" y1="59.48372615039282" x1="42.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="59.48372615039282" cx="42.5"/>
+<svg:line stroke-width="1" stroke="black" y2="33.557800224466895" x2="72.5" y1="14.590347923681257" x1="57.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="14.590347923681257" cx="57.5"/>
+<svg:line stroke-width="1" stroke="black" y2="56.11672278338945" x2="87.5" y1="33.557800224466895" x1="72.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="33.557800224466895" cx="72.5"/>
+<svg:line stroke-width="1" stroke="black" y2="17.845117845117844" x2="102.5" y1="56.11672278338945" x1="87.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="56.11672278338945" cx="87.5"/>
+<svg:line stroke-width="1" stroke="black" y2="21.885521885521886" x2="117.5" y1="17.845117845117844" x1="102.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="17.845117845117844" cx="102.5"/>
+<svg:line stroke-width="1" stroke="black" y2="79.91021324354658" x2="132.5" y1="21.885521885521886" x1="117.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="21.885521885521886" cx="117.5"/>
+<svg:line stroke-width="1" stroke="black" y2="109.42760942760943" x2="147.5" y1="79.91021324354658" x1="132.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="79.91021324354658" cx="132.5"/>
+<svg:line stroke-width="1" stroke="black" y2="24.57912457912458" x2="162.5" y1="109.42760942760943" x1="147.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="109.42760942760943" cx="147.5"/>
+<svg:line stroke-width="1" stroke="black" y2="39.95510662177329" x2="177.5" y1="24.57912457912458" x1="162.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="24.57912457912458" cx="162.5"/>
+<svg:line stroke-width="1" stroke="black" y2="57.12682379349046" x2="192.5" y1="39.95510662177329" x1="177.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="39.95510662177329" cx="177.5"/>
+<svg:line stroke-width="1" stroke="black" y2="73.17620650953984" x2="207.5" y1="57.12682379349046" x1="192.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="57.12682379349046" cx="192.5"/>
+<svg:line stroke-width="1" stroke="black" y2="89.45005611672279" x2="222.5" y1="73.17620650953984" x1="207.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="73.17620650953984" cx="207.5"/>
+<svg:line stroke-width="1" stroke="black" y2="105.38720538720538" x2="237.5" y1="89.45005611672279" x1="222.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="89.45005611672279" cx="222.5"/>
+<svg:line stroke-width="1" stroke="black" y2="35.91470258136925" x2="252.5" y1="105.38720538720538" x1="237.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="105.38720538720538" cx="237.5"/>
+<svg:line stroke-width="1" stroke="black" y2="65.09539842873177" x2="267.5" y1="35.91470258136925" x1="252.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="35.91470258136925" cx="252.5"/>
+<svg:line stroke-width="1" stroke="black" y2="93.6026936026936" x2="282.5" y1="65.09539842873177" x1="267.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="65.09539842873177" cx="267.5"/>
+<svg:line stroke-width="1" stroke="black" y2="32.323232323232325" x2="297.5" y1="93.6026936026936" x1="282.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="93.6026936026936" cx="282.5"/>
+<svg:line stroke-width="1" stroke="black" y2="58.58585858585859" x2="312.5" y1="32.323232323232325" x1="297.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="32.323232323232325" cx="297.5"/>
+<svg:line stroke-width="1" stroke="black" y2="9.427609427609427" x2="327.5" y1="58.58585858585859" x1="312.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="58.58585858585859" cx="312.5"/>
+<svg:line stroke-width="1" stroke="black" y2="101.01010101010101" x2="342.5" y1="9.427609427609427" x1="327.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="9.427609427609427" cx="327.5"/>
+<svg:circle fill="white" stroke-width="1" stroke="red" r="2" cy="101.01010101010101" cx="342.5"/>
+</svg:g>
+<svg:g transform="translate(0 118)">
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="27.5" writing-mode="tb">ABC</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="42.5" writing-mode="tb">BDE</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="57.5" writing-mode="tb">CDE</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="72.5" writing-mode="tb">DEF</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="87.5" writing-mode="tb">EGH</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="102.5" writing-mode="tb">FGH</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="117.5" writing-mode="tb">GHI</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="132.5" writing-mode="tb">HIJ</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="147.5" writing-mode="tb">IJK</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="162.5" writing-mode="tb">JKL</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="177.5" writing-mode="tb">KLM</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="192.5" writing-mode="tb">LMN</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="207.5" writing-mode="tb">MNO</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="222.5" writing-mode="tb">NOP</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="237.5" writing-mode="tb">OPQ</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="252.5" writing-mode="tb">PQR</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="267.5" writing-mode="tb">QRS</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="282.5" writing-mode="tb">RST</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="297.5" writing-mode="tb">STU</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="312.5" writing-mode="tb">TUV</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="327.5" writing-mode="tb">VWX</svg:text>
+<svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="342.5" writing-mode="tb">XYZ</svg:text>
+<svg:line stroke-width="2" stroke="black" y2="0" x2="360" y1="0" x1="20"/>
+</svg:g>
+</svg:svg>

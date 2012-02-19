@@ -147,7 +147,7 @@ Redistribution and use, with or without modification, are permitted provided tha
                         <xsl:call-template name="printXAxis">
                             <xsl:with-param name="xData" select="$xData" />
                             <xsl:with-param name="step" select="$barWidth" />
-                            <xsl:with-param name="xMin" select="$leftPadding+$barWidth div 2" />
+                            <xsl:with-param name="xMin" select="$xMin+$barWidth div 2" />
                             <xsl:with-param name="xMax" select="$yCount" />
                         </xsl:call-template>
                         <svg:line x1="{$xMin}" y1="0" x2="{$xMax}" y2="0" stroke="black" stroke-width="2" />
