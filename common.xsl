@@ -16,8 +16,12 @@ Redistribution and use, with or without modification, are permitted provided tha
     # Neither the name of Imaginea nor the names of the developers may be used to endorse or promote products derived from
       this software without specific prior written permission.
 -->
-<xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	
+	<!-- global parameters -->
+	<xsl:param name="colours" select="document('colours.xml')/colours/colour" />
+    <xsl:param name="font" select="'Arial'" />
+    <xsl:param name="fontSize" select="5" />
 	
 	<!-- Helper template to return the maximum of given items -->
 	<xsl:template name="maximum">
@@ -31,8 +35,33 @@ Redistribution and use, with or without modification, are permitted provided tha
 		</xsl:for-each>
 	</xsl:template>
 	
+	<!-- Helper template to return the minimum of given items -->
+    <xsl:template name="minimum">
+        <xsl:param name="numbers" />
+        
+        <xsl:for-each select="$numbers">
+            <xsl:sort select="." data-type="number" order="ascending" />
+            <xsl:if test="position()=1">
+                <xsl:value-of select="." />
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <!-- Helper template to return the absolute value -->
+    <xsl:template name="absolute">
+        <xsl:param name="number" />
+        
+        <xsl:choose>
+            <xsl:when test="$number &gt;= 0">
+                <xsl:value-of select="$number" />
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="- $number" />
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+	
 	<!-- Returns a named colour for the given index -->
-	<xsl:variable name="colours" select="document('colours.xml')/colours/colour" />
 	<xsl:template name="colour">
 		<xsl:param name="index" />
 		<xsl:value-of select="$colours[@index=($index mod count($colours))]" />
@@ -48,7 +77,7 @@ Redistribution and use, with or without modification, are permitted provided tha
 	   <xsl:for-each select="$xData">
 	        <xsl:if test="position() &lt;= $xMax">
 	            <svg:text writing-mode="tb" x="{$xMin+(position() - 1)*$step}" dy="5"
-	                fill="black" font-family="serif" font-weight="bold" font-size="5" xmlns:svg="http://www.w3.org/2000/svg">
+	                fill="black" font-family="{$font}" font-weight="bold" font-size="{$fontSize}" xmlns:svg="http://www.w3.org/2000/svg">
 	                <xsl:value-of select="." />
 	            </svg:text>
 	        </xsl:if>
@@ -57,17 +86,27 @@ Redistribution and use, with or without modification, are permitted provided tha
     
     <!-- Helper template to print y-axis -->
     <xsl:template name="printYAxis">
-        <xsl:param name="index" select="0" />
+        <xsl:param name="index" />
         <xsl:param name="step" />
         <xsl:param name="xMin" />
         <xsl:param name="xMax" />
         <xsl:param name="yMin" />
         <xsl:param name="yMax" />
-        <xsl:param name="reductionFactor" />
+        <xsl:param name="yScale" />
         
-        <xsl:if test="$index &lt;= $yMax+$step">
-            <xsl:variable name="y" select="$reductionFactor*($yMax - $index)" />
-            <svg:text dx="5" y="{$y}" fill="black" font-family="serif" font-weight="bold" font-size="5" xmlns:svg="http://www.w3.org/2000/svg">
+        <xsl:variable name="labelDelta" select="$fontSize div 2" />
+        <xsl:if test="$index &lt; $yMax">
+            <xsl:variable name="y">
+                <xsl:choose>
+                     <xsl:when test="$yMin &lt; 0">
+                         <xsl:value-of select="floor($yScale*($yMax - $index + $step div 2))" />
+                     </xsl:when>
+                     <xsl:otherwise>
+                         <xsl:value-of select="floor($yScale*($yMax - $index))" />
+                     </xsl:otherwise>
+                 </xsl:choose>
+            </xsl:variable>
+            <svg:text x="{($xMin - 5)}" y="{($y + $labelDelta)}" text-anchor="end" fill="black" font-family="{$font}" font-weight="bold" font-size="{$fontSize}" xmlns:svg="http://www.w3.org/2000/svg">
                 <xsl:value-of select="$index" />
             </svg:text>
             <svg:line x1="{$xMin}" y1="{$y}" x2="{$xMax}" y2="{$y}" stroke="grey" stroke-width="0.25" xmlns:svg="http://www.w3.org/2000/svg" />
@@ -79,7 +118,7 @@ Redistribution and use, with or without modification, are permitted provided tha
                 <xsl:with-param name="xMax" select="$xMax" />
                 <xsl:with-param name="yMin" select="$yMin" />
                 <xsl:with-param name="yMax" select="$yMax" />
-                <xsl:with-param name="reductionFactor" select="$reductionFactor" />
+                <xsl:with-param name="yScale" select="$yScale" />
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
