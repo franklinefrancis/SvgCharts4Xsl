@@ -19,21 +19,21 @@ Redistribution and use, with or without modification, are permitted provided tha
 <colours>
     <colour index="0">violet</colour>
     <colour index="1">orangered</colour>
-    <colour index="2">olivedrab</colour>
-    <colour index="3">brown</colour>
+    <colour index="2">navajowhite</colour>
+    <colour index="3">teal</colour>
     <colour index="4">limegreen</colour>
     <colour index="5">hotpink</colour>
     <colour index="6">maroon</colour>
     <colour index="7">steelblue</colour>
 	<colour index="8">olive</colour>
-	<colour index="9">purple</colour>
+	<colour index="9">gold</colour>
 	<colour index="10">yellow</colour>
 	<colour index="11">yellowgreen</colour>
 	<colour index="12">red</colour>
 	<colour index="13">wheat</colour>
 	<colour index="14">darkgreen</colour>
-	<colour index="15">teal</colour>
-	<colour index="16">indigo</colour>
+	<colour index="15">brown</colour>
+	<colour index="16">olivedrab</colour>
 	<colour index="17">darkblue</colour>
 	<colour index="18">firebrick</colour>
 	<colour index="19">gray</colour>

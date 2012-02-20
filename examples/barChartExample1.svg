@@ -33,27 +33,27 @@
 </svg:g>
 <svg:g transform="translate(0 118) scale(1 -1)">
 <svg:rect stroke-width="1" stroke="black" fill="orangered" height="37" width="15" ry="2" rx="2" y="0" x="20"/>
-<svg:rect stroke-width="1" stroke="black" fill="olivedrab" height="59" width="15" ry="2" rx="2" y="0" x="35"/>
-<svg:rect stroke-width="1" stroke="black" fill="brown" height="14" width="15" ry="2" rx="2" y="0" x="50"/>
+<svg:rect stroke-width="1" stroke="black" fill="navajowhite" height="59" width="15" ry="2" rx="2" y="0" x="35"/>
+<svg:rect stroke-width="1" stroke="black" fill="teal" height="14" width="15" ry="2" rx="2" y="0" x="50"/>
 <svg:rect stroke-width="1" stroke="black" fill="limegreen" height="33" width="15" ry="2" rx="2" y="0" x="65"/>
 <svg:rect stroke-width="1" stroke="black" fill="hotpink" height="56" width="15" ry="2" rx="2" y="0" x="80"/>
 <svg:rect stroke-width="1" stroke="black" fill="maroon" height="17" width="15" ry="2" rx="2" y="0" x="95"/>
 <svg:rect stroke-width="1" stroke="black" fill="steelblue" height="21" width="15" ry="2" rx="2" y="0" x="110"/>
 <svg:rect stroke-width="1" stroke="black" fill="olive" height="79" width="15" ry="2" rx="2" y="0" x="125"/>
-<svg:rect stroke-width="1" stroke="black" fill="purple" height="109" width="15" ry="2" rx="2" y="0" x="140"/>
+<svg:rect stroke-width="1" stroke="black" fill="gold" height="109" width="15" ry="2" rx="2" y="0" x="140"/>
 <svg:rect stroke-width="1" stroke="black" fill="yellow" height="24" width="15" ry="2" rx="2" y="0" x="155"/>
 <svg:rect stroke-width="1" stroke="black" fill="yellowgreen" height="39" width="15" ry="2" rx="2" y="0" x="170"/>
 <svg:rect stroke-width="1" stroke="black" fill="red" height="57" width="15" ry="2" rx="2" y="0" x="185"/>
 <svg:rect stroke-width="1" stroke="black" fill="wheat" height="73" width="15" ry="2" rx="2" y="0" x="200"/>
 <svg:rect stroke-width="1" stroke="black" fill="darkgreen" height="89" width="15" ry="2" rx="2" y="0" x="215"/>
-<svg:rect stroke-width="1" stroke="black" fill="teal" height="105" width="15" ry="2" rx="2" y="0" x="230"/>
-<svg:rect stroke-width="1" stroke="black" fill="indigo" height="35" width="15" ry="2" rx="2" y="0" x="245"/>
+<svg:rect stroke-width="1" stroke="black" fill="brown" height="105" width="15" ry="2" rx="2" y="0" x="230"/>
+<svg:rect stroke-width="1" stroke="black" fill="olivedrab" height="35" width="15" ry="2" rx="2" y="0" x="245"/>
 <svg:rect stroke-width="1" stroke="black" fill="darkblue" height="65" width="15" ry="2" rx="2" y="0" x="260"/>
 <svg:rect stroke-width="1" stroke="black" fill="firebrick" height="93" width="15" ry="2" rx="2" y="0" x="275"/>
 <svg:rect stroke-width="1" stroke="black" fill="gray" height="32" width="15" ry="2" rx="2" y="0" x="290"/>
 <svg:rect stroke-width="1" stroke="black" fill="violet" height="58" width="15" ry="2" rx="2" y="0" x="305"/>
 <svg:rect stroke-width="1" stroke="black" fill="orangered" height="9" width="15" ry="2" rx="2" y="0" x="320"/>
-<svg:rect stroke-width="1" stroke="black" fill="olivedrab" height="101" width="15" ry="2" rx="2" y="0" x="335"/>
+<svg:rect stroke-width="1" stroke="black" fill="navajowhite" height="101" width="15" ry="2" rx="2" y="0" x="335"/>
 </svg:g>
 <svg:g transform="translate(0 118)">
 <svg:text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="27.5" writing-mode="tb">ABC</svg:text>

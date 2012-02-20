@@ -17,157 +17,162 @@ Redistribution and use, with or without modification, are permitted provided tha
       this software without specific prior written permission.
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:import href="common.xsl" />
-    <xsl:output method="xml" omit-xml-declaration="no" indent="yes" version="1.0" encoding="UTF-8" doctype-system="-//W3C//DTD SVG 1.0//EN"
-        doctype-public="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" />
-        
-    <!-- Prints a simple line chart with grid -->
-    <xsl:template name="lineChart">
-        <xsl:param name="xData" />
-        <xsl:param name="yData" />
-        <xsl:param name="lineColour" select="'black'" />
-        <xsl:param name="pointColour" select="'red'" />
-        <xsl:param name="width" select="300" />
-        <xsl:param name="height" select="300" />
-        <xsl:param name="xDelta" select="15" />
-        <xsl:param name="leftPadding" select="20" />
-        <xsl:param name="rightPadding" select="10" />
-        <xsl:param name="verticalSpan" select="100" />
+	<xsl:import href="common.xsl" />
+	<xsl:output method="xml" omit-xml-declaration="no" indent="yes" version="1.0" encoding="UTF-8" doctype-system="-//W3C//DTD SVG 1.0//EN"
+		doctype-public="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" />
 
-        <xsl:variable name="xCount" select="count($xData)" />
-        <xsl:variable name="yCount" select="count($yData)" />
+	<!-- Prints a simple line chart with grid -->
+	<xsl:template name="lineChart">
+		<xsl:param name="xData" />
+		<xsl:param name="yData" />
+		<xsl:param name="lineColour" select="'black'" />
+		<xsl:param name="pointColour" select="'red'" />
+		<xsl:param name="width" select="300" />
+		<xsl:param name="height" select="300" />
+		<xsl:param name="xDelta" select="15" />
+		<xsl:param name="leftPadding" select="20" />
+		<xsl:param name="rightPadding" select="10" />
+		<xsl:param name="verticalSpan" select="100" />
 
-        <xsl:if test="$xCount &gt; 0 and $yCount &gt; 0">
-            <xsl:variable name="yDataMin">
-                <xsl:call-template name="minimum">
-                    <xsl:with-param name="numbers" select="$yData" />
-                </xsl:call-template>
-            </xsl:variable>
-            <xsl:variable name="yDataMax">
-                <xsl:call-template name="maximum">
-                    <xsl:with-param name="numbers" select="$yData" />
-                </xsl:call-template>
-            </xsl:variable>
-            <xsl:variable name="yScale" select="$verticalSpan div ($yDataMax - $yDataMin)" />
-            <xsl:variable name="yDelta" select="round(($yDataMax - $yDataMin) div $yCount)*2" />
-            <xsl:variable name="xMin" select="$leftPadding" />
-            <xsl:variable name="xMax" select="$xMin+count($yData)*$xDelta+$rightPadding" />
-            <xsl:variable name="xStart" select="$xMin+$xDelta div 2" />
-            <xsl:variable name="yMin">
-                 <xsl:choose>
-                     <xsl:when test="$yDataMin &lt; 0">
-                         <xsl:value-of select="$yDataMin - $yDelta" />
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="0" />
-                     </xsl:otherwise>
-                 </xsl:choose>
-            </xsl:variable>
-            <xsl:variable name="yMax" select="$yDataMax+$yDelta" />
-            <xsl:variable name="bottom">
-                 <xsl:choose>
-                     <xsl:when test="$yDataMin &lt; 0">
-                         <xsl:value-of select="- $verticalSpan" />
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="0" />
-                     </xsl:otherwise>
-                 </xsl:choose>
-            </xsl:variable>
-            <xsl:variable name="yStep" select="$yDelta*$yScale" />
-            <xsl:variable name="totalHeight" select="floor($verticalSpan+$bottom+2*$yStep)" />
-            <xsl:variable name="yStart">
-                <xsl:choose>
-                     <xsl:when test="$yDataMin &lt; 0">
-                         <xsl:value-of select="$bottom - $yStep" />
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="$bottom" />
-                     </xsl:otherwise>
-                 </xsl:choose>
-            </xsl:variable>
-            <xsl:variable name="yCentre">
-                <xsl:choose>
-                     <xsl:when test="$yMin &lt; 0">
-                         <xsl:value-of select="floor($yScale*($yMax + $yDelta div 2))" />
-                     </xsl:when>
-                     <xsl:otherwise>
-                         <xsl:value-of select="floor($yScale*$yMax)" />
-                     </xsl:otherwise>
-                 </xsl:choose>
-            </xsl:variable>
-            
-            <svg:svg version="1.1" width="100%" height="100%" xmlns:svg="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid" viewBox="0 0 {$width} {$height}">
-                    <!-- Print centre -->
-                    <svg:circle cx="{$xMin}" cy="{$yCentre}" r="1" />
+		<xsl:variable name="xCount" select="count($xData)" />
+		<xsl:variable name="yCount" select="count($yData)" />
 
-                    <!-- Print y-axis -->
-                    <xsl:call-template name="printYAxis">
-                       <xsl:with-param name="index" select="$yMin" />
-                        <xsl:with-param name="step" select="$yDelta" />
-                        <xsl:with-param name="xMin" select="$xMin" />
-                        <xsl:with-param name="xMax" select="$xMax" />
-                        <xsl:with-param name="yMin" select="$yMin" />
-                        <xsl:with-param name="yMax" select="$yMax" />
-                        <xsl:with-param name="yScale" select="$yScale" />
-                    </xsl:call-template>
-                    <svg:g transform="translate(0 {$totalHeight}) scale(1 -1)">
-                       <svg:line x1="{$xMin}" y1="{$yStart}" x2="{$xMin}" y2="{$totalHeight}" stroke="black" stroke-width="2" />
-                    </svg:g>
-                    
-                    <!-- Print points -->
-                    <svg:g transform="translate(0 {$yCentre}) scale(1 -1)">
-                        <xsl:call-template name="printPoints">
-                            <xsl:with-param name="yData" select="$yData" />
-				            <xsl:with-param name="xMin" select="$xStart" />
-				            <xsl:with-param name="xDelta" select="$xDelta" />
-				            <xsl:with-param name="yScale" select="$yScale" />
-				            <xsl:with-param name="lineColour" select="$lineColour" />
-                            <xsl:with-param name="pointColour" select="$pointColour" />
-				        </xsl:call-template>
-                    </svg:g>
-                    
-                    <!-- Print x-axis -->
-                    <svg:g transform="translate(0 {$yCentre})">
-                        <xsl:call-template name="printXAxis">
-                            <xsl:with-param name="xData" select="$xData" />
-                            <xsl:with-param name="step" select="$xDelta" />
-                            <xsl:with-param name="xMin" select="$xStart" />
-                            <xsl:with-param name="xMax" select="$yCount" />
-                        </xsl:call-template>
-                        <svg:line x1="{$xMin}" y1="0" x2="{$xMax}" y2="0" stroke="black" stroke-width="2" />
-                    </svg:g>
-            </svg:svg>
-        </xsl:if>
-    </xsl:template>
-    
-    <!-- Prints points and joins them -->
-    <xsl:template name="printPoints">
-        <xsl:param name="yData" />
-        <xsl:param name="index" select="1" />
-        <xsl:param name="xMin" />
-        <xsl:param name="xDelta" />
-        <xsl:param name="yScale" />
-        <xsl:param name="lineColour" />
-        <xsl:param name="pointColour" />
-        
-        <xsl:variable name="x" select="$xMin+($index - 1)*$xDelta" />
-        <xsl:variable name="y" select="$yData[$index]*$yScale" />
-        <xsl:if test="$yData[$index+1]">
-            <svg:line x1="{$x}" y1="{$y}" x2="{$xMin+($index)*$xDelta}" y2="{$yData[$index+1]*$yScale}" stroke="{$lineColour}" stroke-width="1" xmlns:svg="http://www.w3.org/2000/svg" />
-        </xsl:if>
-        <svg:circle cx="{$x}" cy="{$y}" r="2" stroke="{$pointColour}" stroke-width="1" fill="white" xmlns:svg="http://www.w3.org/2000/svg" />
-        
-        <xsl:if test="$index &lt; count($yData)">
-	        <xsl:call-template name="printPoints">
-	            <xsl:with-param name="yData" select="$yData" />
-	            <xsl:with-param name="index" select="$index+1" />
-	            <xsl:with-param name="xMin" select="$xMin" />
-	            <xsl:with-param name="xDelta" select="$xDelta" />
-	            <xsl:with-param name="yScale" select="$yScale" />
-	            <xsl:with-param name="lineColour" select="$lineColour" />
-	            <xsl:with-param name="pointColour" select="$pointColour" />
-	        </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
+		<svg:svg version="1.1" width="100%" height="100%" preserveAspectRatio="xMinYMid" viewBox="0 0 {$width} {$height}"
+		    xmlns:svg="http://www.w3.org/2000/svg">
+			<xsl:if test="$xCount &gt; 0 and $yCount &gt; 0">
+				<xsl:variable name="yDataMin">
+					<xsl:call-template name="minimum">
+						<xsl:with-param name="numbers" select="$yData" />
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:variable name="yDataMax">
+					<xsl:call-template name="maximum">
+						<xsl:with-param name="numbers" select="$yData" />
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:variable name="yScale" select="$verticalSpan div ($yDataMax - $yDataMin)" />
+				<xsl:variable name="yDelta" select="round(($yDataMax - $yDataMin) div $yCount)*2" />
+				<xsl:variable name="xMin" select="$leftPadding" />
+				<xsl:variable name="xMax" select="$xMin+count($yData)*$xDelta+$rightPadding" />
+				<xsl:variable name="xStart" select="$xMin+$xDelta div 2" />
+				<xsl:variable name="yMin">
+					<xsl:choose>
+						<xsl:when test="$yDataMin &lt; 0">
+							<xsl:value-of select="$yDataMin - $yDelta" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="0" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="yMax" select="$yDataMax+$yDelta" />
+				<xsl:variable name="bottom">
+					<xsl:choose>
+						<xsl:when test="$yDataMin &lt; 0">
+							<xsl:value-of select="- $verticalSpan" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="0" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="yStep" select="$yDelta*$yScale" />
+				<xsl:variable name="totalHeight" select="floor($verticalSpan+$bottom+2*$yStep)" />
+				<xsl:variable name="yStart">
+					<xsl:choose>
+						<xsl:when test="$yDataMin &lt; 0">
+							<xsl:value-of select="$bottom - $yStep" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="$bottom" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+				<xsl:variable name="yCentre">
+					<xsl:choose>
+						<xsl:when test="$yMin &lt; 0">
+							<xsl:value-of select="floor($yScale*($yMax + $yDelta div 2))" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="floor($yScale*$yMax)" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:variable>
+
+
+				<!-- Print centre -->
+				<svg:circle cx="{$xMin}" cy="{$yCentre}" r="1" />
+
+				<!-- Print y-axis -->
+				<xsl:call-template name="printYAxis">
+					<xsl:with-param name="index" select="$yMin" />
+					<xsl:with-param name="step" select="$yDelta" />
+					<xsl:with-param name="xMin" select="$xMin" />
+					<xsl:with-param name="xMax" select="$xMax" />
+					<xsl:with-param name="yMin" select="$yMin" />
+					<xsl:with-param name="yMax" select="$yMax" />
+					<xsl:with-param name="yScale" select="$yScale" />
+				</xsl:call-template>
+				<svg:g transform="translate(0 {$totalHeight}) scale(1 -1)">
+					<svg:line x1="{$xMin}" y1="{$yStart}" x2="{$xMin}" y2="{$totalHeight}"
+					    stroke="black" stroke-width="2" />
+				</svg:g>
+
+				<!-- Print points -->
+				<svg:g transform="translate(0 {$yCentre}) scale(1 -1)">
+					<xsl:call-template name="_printPoints">
+						<xsl:with-param name="yData" select="$yData" />
+						<xsl:with-param name="xMin" select="$xStart" />
+						<xsl:with-param name="xDelta" select="$xDelta" />
+						<xsl:with-param name="yScale" select="$yScale" />
+						<xsl:with-param name="lineColour" select="$lineColour" />
+						<xsl:with-param name="pointColour" select="$pointColour" />
+					</xsl:call-template>
+				</svg:g>
+
+				<!-- Print x-axis -->
+				<svg:g transform="translate(0 {$yCentre})">
+					<xsl:call-template name="printXAxis">
+						<xsl:with-param name="xData" select="$xData" />
+						<xsl:with-param name="step" select="$xDelta" />
+						<xsl:with-param name="xMin" select="$xStart" />
+						<xsl:with-param name="xMax" select="$yCount" />
+					</xsl:call-template>
+					<svg:line x1="{$xMin}" y1="0" x2="{$xMax}" y2="0" stroke="black" stroke-width="2" />
+				</svg:g>
+			</xsl:if>
+		</svg:svg>
+	</xsl:template>
+
+	<!-- Prints points and joins them -->
+	<xsl:template name="_printPoints">
+		<xsl:param name="yData" />
+		<xsl:param name="index" select="1" />
+		<xsl:param name="xMin" />
+		<xsl:param name="xDelta" />
+		<xsl:param name="yScale" />
+		<xsl:param name="lineColour" />
+		<xsl:param name="pointColour" />
+
+		<xsl:variable name="x" select="$xMin+($index - 1)*$xDelta" />
+		<xsl:variable name="y" select="$yData[$index]*$yScale" />
+		<xsl:if test="$yData[$index+1]">
+			<svg:line x1="{$x}" y1="{$y}" x2="{$xMin+($index)*$xDelta}" y2="{$yData[$index+1]*$yScale}"
+			    stroke="{$lineColour}" stroke-width="1" xmlns:svg="http://www.w3.org/2000/svg" />
+		</xsl:if>
+		<svg:circle cx="{$x}" cy="{$y}" r="2" fill="white" stroke="{$pointColour}" stroke-width="1"
+		    xmlns:svg="http://www.w3.org/2000/svg" />
+
+		<xsl:if test="$index &lt; count($yData)">
+			<xsl:call-template name="_printPoints">
+				<xsl:with-param name="yData" select="$yData" />
+				<xsl:with-param name="index" select="$index+1" />
+				<xsl:with-param name="xMin" select="$xMin" />
+				<xsl:with-param name="xDelta" select="$xDelta" />
+				<xsl:with-param name="yScale" select="$yScale" />
+				<xsl:with-param name="lineColour" select="$lineColour" />
+				<xsl:with-param name="pointColour" select="$pointColour" />
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
 </xsl:stylesheet>
