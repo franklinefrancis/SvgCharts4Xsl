@@ -19,17 +19,19 @@ Redistribution and use, with or without modification, are permitted provided tha
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:math="http://exslt.org/math" xmlns:exsl="http://exslt.org/common">
 	<xsl:import href="common.xsl" />
-	<xsl:output method="xml" omit-xml-declaration="no" indent="yes" version="1.0" encoding="UTF-8" doctype-system="-//W3C//DTD SVG 1.0//EN"
-		doctype-public="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" />
-
-	<xsl:param name="OTHERS_LABEL" select="'Others'" />
 
 	<!-- Constants -->
+	<xsl:variable name="MIN_VERTICAL_SPAN" select="100" />
+	<xsl:variable name="CUT_OFF_PERCENTAGE" select="0.05" />
 	<xsl:variable name="DEGREE_RADIAN_RATIO" select="0.0175" /> <!-- 1 degree = 0.0175 radians -->
-	<xsl:variable name="VALUE_ANGLE_RATIO" select="6.3" /> <!-- 360 degrees = 6.3 radians -->
-	<xsl:variable name="HALF_CIRCLE_ANGLE" select="3.14" /> <!-- 180 degrees = 3.14 radians -->
+	<xsl:variable name="HALF_CIRCLE_ANGLE" select="3.1415" /> <!-- 180 degrees = 3.14 radians -->
+	<xsl:variable name="FULL_CIRCLE_ANGLE" select="$HALF_CIRCLE_ANGLE*2" /> <!-- 360 degrees = 6.29 radians -->
 
-	<!-- Prints a simple pie chart with legend -->
+	<!--
+	Prints a simple pie chart with legend
+	1. Will not work on transformers not supporting EXSLT extension
+	2. Percentages may not be accurate
+	-->
 	<xsl:template name="pieChart">
 		<xsl:param name="xData" />
 		<xsl:param name="yData" />
@@ -37,54 +39,57 @@ Redistribution and use, with or without modification, are permitted provided tha
 		<xsl:param name="height" select="300" />
 		<xsl:param name="padding" select="10" />
 		<xsl:param name="verticalSpan" select="100" />
+		<xsl:param name="othersLabel" select="'Others'" />
 
 		<xsl:variable name="xCount" select="count($xData)" />
 		<xsl:variable name="yCount" select="count($yData)" />
-		<xsl:variable name="yDataMin">
-			<xsl:call-template name="minimum">
-				<xsl:with-param name="numbers" select="$yData" />
-			</xsl:call-template>
+		<xsl:variable name="_verticalSpan">
+		    <xsl:choose>
+                <xsl:when test="$verticalSpan &lt; $MIN_VERTICAL_SPAN">
+                    <xsl:value-of select="$MIN_VERTICAL_SPAN" />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$verticalSpan" />
+                </xsl:otherwise>
+            </xsl:choose>
 		</xsl:variable>
 
 		<svg:svg version="1.1" width="100%" height="100%" preserveAspectRatio="xMinYMid" viewBox="0 0 {$width} {$height}"
 		    xmlns:svg="http://www.w3.org/2000/svg">
-			<xsl:if test="$xCount &gt; 0 and $yCount &gt; 0 and $yDataMin &gt;= 0">
-				<xsl:variable name="total" select="sum($yData)" />
+			<xsl:if test="$xCount &gt; 0 and $yCount &gt; 0">
 				<xsl:variable name="_aggregatedData">
 					<xsl:call-template name="_aggregate">
 						<xsl:with-param name="xData" select="$xData" />
 						<xsl:with-param name="yData" select="$yData" />
-						<xsl:with-param name="total" select="$total" />
+						<xsl:with-param name="othersLabel" select="$othersLabel" />
 					</xsl:call-template>
 				</xsl:variable>
 				<xsl:variable name="aggregatedData" select="exsl:node-set($_aggregatedData)/*" />
 
 				<xsl:call-template name="_printPies">
 					<xsl:with-param name="data" select="$aggregatedData" />
-					<xsl:with-param name="total" select="$total" />
 					<xsl:with-param name="padding" select="$padding" />
 					<xsl:with-param name="radius" select="$verticalSpan div 2" />
 				</xsl:call-template>
 				<xsl:call-template name="_printLegend">
 					<xsl:with-param name="data" select="$aggregatedData" />
-					<xsl:with-param name="xStart" select="$padding*2.5+$verticalSpan" />
-					<xsl:with-param name="yStart" select="$verticalSpan div 4" />
+					<xsl:with-param name="xStart" select="$padding*2.5+$_verticalSpan" />
+					<xsl:with-param name="yStart" select="$padding" />
 				</xsl:call-template>
 			</xsl:if>
 		</svg:svg>
 	</xsl:template>
 
-	<!-- Aggregates data to be printed, merges small values under 'Others' -->
+	<!-- Aggregates data to be printed; merges small values under 'Others' -->
 	<xsl:template name="_aggregate">
 		<xsl:param name="xData" />
 		<xsl:param name="yData" />
-		<xsl:param name="total" />
-
+		<xsl:param name="othersLabel" />
+		
 		<xsl:variable name="_transformedData">
 			<xsl:call-template name="_transform">
 				<xsl:with-param name="xData" select="$xData" />
 				<xsl:with-param name="yData" select="$yData" />
-				<xsl:with-param name="total" select="$total" />
 			</xsl:call-template>
 		</xsl:variable>
 		<xsl:variable name="transformedData" select="exsl:node-set($_transformedData)/*" />
@@ -102,7 +107,7 @@ Redistribution and use, with or without modification, are permitted provided tha
 		<xsl:if test="$sumOfOthers &gt; 0">
 			<xsl:element name="item">
 				<xsl:attribute name="name">
-                    <xsl:value-of select="$OTHERS_LABEL" />
+                    <xsl:value-of select="$othersLabel" />
                 </xsl:attribute>
 				<xsl:value-of select="$sumOfOthers" />
 			</xsl:element>
@@ -113,19 +118,22 @@ Redistribution and use, with or without modification, are permitted provided tha
 	<xsl:template name="_transform">
 		<xsl:param name="xData" />
 		<xsl:param name="yData" />
-		<xsl:param name="total" />
 
+        <xsl:variable name="total" select="sum($yData[. &gt; 0])" />
 		<xsl:for-each select="$yData">
 			<xsl:variable name="index" select="position()" />
 
 			<xsl:choose>
-				<!-- collect insignificant value (< 5%) as 'other' -->
-				<xsl:when test="(. div $total) &lt; 0.05">
+			    <xsl:when test=". &lt;= 0">
+                    <!-- ignore negative values -->
+                </xsl:when>
+				<!-- collect insignificant values (< cut-off) as 'other' -->
+				<xsl:when test="(. div $total) &lt; $CUT_OFF_PERCENTAGE">
 					<xsl:element name="other">
 						<xsl:value-of select="." />
 					</xsl:element>
 				</xsl:when>
-				<!-- collect significant value (> 5%) as 'item' -->
+				<!-- collect significant values (> cut-off%) as 'item' -->
 				<xsl:otherwise>
 					<xsl:element name="item">
 						<xsl:attribute name="name">
@@ -141,13 +149,13 @@ Redistribution and use, with or without modification, are permitted provided tha
 	<!-- Prints each pie recursively -->
 	<xsl:template name="_printPies">
 		<xsl:param name="data" />
-		<xsl:param name="total" />
+		<xsl:param name="total" select="sum($data)" />
 		<xsl:param name="padding" />
 		<xsl:param name="radius" />
 		<xsl:param name="index" select="1" />
 
 		<xsl:variable name="rotationInDegrees" select="270+(360*(sum($data[position()&lt;$index]) div $total))" />
-		<xsl:variable name="angleInRadians" select="($data[$index] div $total)*$VALUE_ANGLE_RATIO" />
+		<xsl:variable name="angleInRadians" select="($data[$index] div $total)*$FULL_CIRCLE_ANGLE" />
 
 		<xsl:call-template name="_printPie">
 			<xsl:with-param name="index" select="$index" />
@@ -219,7 +227,7 @@ Redistribution and use, with or without modification, are permitted provided tha
 		<xsl:param name="padding" />
 		<xsl:param name="radius" />
 
-		<xsl:variable name="labelRadius" select="$radius*0.8" />
+		<xsl:variable name="labelRadius" select="$radius*0.7" />
 		<xsl:variable name="cosine" select="math:cos($rotationInRadians)" />
 		<xsl:variable name="sine" select="math:sin($rotationInRadians)" />
 		<xsl:variable name="x" select="math:cos($angleInRadians)*$labelRadius" />

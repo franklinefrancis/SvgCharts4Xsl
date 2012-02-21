@@ -18,8 +18,10 @@ Redistribution and use, with or without modification, are permitted provided tha
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:import href="common.xsl" />
-	<xsl:output method="xml" omit-xml-declaration="no" indent="yes" version="1.0" encoding="UTF-8" doctype-system="-//W3C//DTD SVG 1.0//EN"
-		doctype-public="http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" />
+
+	<!-- Constants -->
+	<xsl:variable name="MIN_VERTICAL_SPAN" select="75" />
+	<xsl:variable name="POINT_RADIUS" select="1.5" />
 
 	<!-- Prints a simple line chart with grid -->
 	<xsl:template name="lineChart">
@@ -36,6 +38,16 @@ Redistribution and use, with or without modification, are permitted provided tha
 
 		<xsl:variable name="xCount" select="count($xData)" />
 		<xsl:variable name="yCount" select="count($yData)" />
+		<xsl:variable name="_verticalSpan">
+            <xsl:choose>
+                <xsl:when test="$verticalSpan &lt; $MIN_VERTICAL_SPAN">
+                    <xsl:value-of select="$MIN_VERTICAL_SPAN" />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$verticalSpan" />
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
 
 		<svg:svg version="1.1" width="100%" height="100%" preserveAspectRatio="xMinYMid" viewBox="0 0 {$width} {$height}"
 		    xmlns:svg="http://www.w3.org/2000/svg">
@@ -50,7 +62,7 @@ Redistribution and use, with or without modification, are permitted provided tha
 						<xsl:with-param name="numbers" select="$yData" />
 					</xsl:call-template>
 				</xsl:variable>
-				<xsl:variable name="yScale" select="$verticalSpan div ($yDataMax - $yDataMin)" />
+				<xsl:variable name="yScale" select="$_verticalSpan div ($yDataMax - $yDataMin)" />
 				<xsl:variable name="yDelta" select="round(($yDataMax - $yDataMin) div $yCount)*2" />
 				<xsl:variable name="xMin" select="$leftPadding" />
 				<xsl:variable name="xMax" select="$xMin+count($yData)*$xDelta+$rightPadding" />
@@ -69,7 +81,7 @@ Redistribution and use, with or without modification, are permitted provided tha
 				<xsl:variable name="bottom">
 					<xsl:choose>
 						<xsl:when test="$yDataMin &lt; 0">
-							<xsl:value-of select="- $verticalSpan" />
+							<xsl:value-of select="- $_verticalSpan" />
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:value-of select="0" />
@@ -77,7 +89,7 @@ Redistribution and use, with or without modification, are permitted provided tha
 					</xsl:choose>
 				</xsl:variable>
 				<xsl:variable name="yStep" select="$yDelta*$yScale" />
-				<xsl:variable name="totalHeight" select="floor($verticalSpan+$bottom+2*$yStep)" />
+				<xsl:variable name="totalHeight" select="round($_verticalSpan+$bottom+2*$yStep)" />
 				<xsl:variable name="yStart">
 					<xsl:choose>
 						<xsl:when test="$yDataMin &lt; 0">
@@ -160,7 +172,7 @@ Redistribution and use, with or without modification, are permitted provided tha
 			<svg:line x1="{$x}" y1="{$y}" x2="{$xMin+($index)*$xDelta}" y2="{$yData[$index+1]*$yScale}"
 			    stroke="{$lineColour}" stroke-width="1" xmlns:svg="http://www.w3.org/2000/svg" />
 		</xsl:if>
-		<svg:circle cx="{$x}" cy="{$y}" r="2" fill="white" stroke="{$pointColour}" stroke-width="1"
+		<svg:circle cx="{$x}" cy="{$y}" r="{$POINT_RADIUS}" fill="white" stroke="{$pointColour}" stroke-width="1"
 		    xmlns:svg="http://www.w3.org/2000/svg" />
 
 		<xsl:if test="$index &lt; count($yData)">

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg:svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg:svg xmlns:svg="http://www.w3.org/2000/svg" xmlns:exsl="http://exslt.org/common" xmlns:math="http://exslt.org/math" viewBox="0 0 300 300" preserveAspectRatio="xMinYMid" height="100%" width="100%" version="1.1">
+<svg:path d="M 50 0 A 50 50 0 0 1 42.22057081788772 26.78476058903137 L 0 0 Z" transform="translate(60 60) rotate(270)" stroke-width="1" stroke="white" fill="orangered"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="10.185151823400613" y="-33.48526067293309">9%</svg:text>
+<svg:path d="M 50 0 A 50 50 0 0 1 42.770431020467534 25.89768774086652 L 0 0 Z" transform="translate(60 60) rotate(302.3920265780731)" stroke-width="1" stroke="white" fill="navajowhite"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="26.33404581865274" y="-23.054674814906793">9%</svg:text>
+<svg:path d="M 50 0 A 50 50 0 0 1 43.345076532608815 24.923971200077343 L 0 0 Z" transform="translate(60 60) rotate(333.5880398671096)" stroke-width="1" stroke="white" fill="teal"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="34.406158926127226" y="-6.41998660045922">8%</svg:text>
+<svg:path d="M 50 0 A 50 50 0 0 1 44.2669127989628 23.247374717353004 L 0 0 Z" transform="translate(60 60) rotate(363.48837209302326)" stroke-width="1" stroke="white" fill="limegreen"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="33.22710361226835" y="10.998162825653354">8%</svg:text>
+<svg:path d="M 50 0 A 50 50 0 0 1 44.75542730231189 22.29241411304472 L 0 0 Z" transform="translate(60 60) rotate(391.19601328903656)" stroke-width="1" stroke="white" fill="hotpink"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="24.53978700087859" y="24.955938250274432">7%</svg:text>
+<svg:path d="M 50 0 A 50 50 0 0 1 45.79932455740742 20.06045538080474 L 0 0 Z" transform="translate(60 60) rotate(417.6744186046511)" stroke-width="1" stroke="white" fill="maroon"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="11.614652248608166" y="33.0166602360672">7%</svg:text>
+<svg:path d="M 50 0 A 50 50 0 0 1 46.469365787107186 18.455298516795448 L 0 0 Z" transform="translate(60 60) rotate(441.32890365448503)" stroke-width="1" stroke="white" fill="steelblue"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-2.0392611447813174" y="34.94054112321939">6%</svg:text>
+<svg:path d="M 50 0 A 50 50 0 0 1 47.199115944538725 16.49980163680736 L 0 0 Z" transform="translate(60 60) rotate(462.99003322259136)" stroke-width="1" stroke="white" fill="olive"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-14.159471503192773" y="32.00795786597876">5%</svg:text>
+<svg:path d="M 50 0 A 50 50 0 0 1 -42.28010645643092 26.690683731086178 L 0 0 Z" transform="translate(60 60) rotate(482.25913621262464)" stroke-width="1" stroke="white" fill="gold"/>
+<svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-33.39512480464968" y="-10.476909815488124">41%</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="orangered" height="5" width="10" ry="1" rx="1" y="10" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="14" x="140" text-anchor="start">IJK (975)</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="navajowhite" height="5" width="10" ry="1" rx="1" y="18" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="22" x="140" text-anchor="start">OPQ (939)</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="teal" height="5" width="10" ry="1" rx="1" y="26" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="30" x="140" text-anchor="start">XYZ (900)</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="limegreen" height="5" width="10" ry="1" rx="1" y="34" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="38" x="140" text-anchor="start">RST (834)</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="hotpink" height="5" width="10" ry="1" rx="1" y="42" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="46" x="140" text-anchor="start">NOP (797)</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="maroon" height="5" width="10" ry="1" rx="1" y="50" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="54" x="140" text-anchor="start">HIJ (712)</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="steelblue" height="5" width="10" ry="1" rx="1" y="58" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="62" x="140" text-anchor="start">MNO (652)</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="olive" height="5" width="10" ry="1" rx="1" y="66" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="70" x="140" text-anchor="start">QRS (580)</svg:text>
+<svg:rect stroke-width="0.5" stroke="black" fill="gold" height="5" width="10" ry="1" rx="1" y="74" x="125"/>
+<svg:text font-size="5" font-family="Arial" y="78" x="140" text-anchor="start">Others (4447)</svg:text>
+</svg:svg>
