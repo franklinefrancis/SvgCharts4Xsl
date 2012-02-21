@@ -3,7 +3,7 @@
 <head>
 <meta name="keywords" content="SVG, XSLT, XSL, Charts, Pie Chart, Bar Chart, Line Chart" />
 <meta name="description" content="SVG charting utility for XSL 1.0" />
-<title>SvgCharts4Xsl</title>
+<title>SvgCharts4Xsl - SVG Charting</title>
 <style type="text/css">
 body {
 	margin-top: 1.0em;
@@ -45,31 +45,23 @@ a {
 	color: #a36b40;
 }
 
-.description {
-	font-size: 1.2em;
-	margin-bottom: 30px;
-	margin-top: 30px;
-	font-style: italic;
-}
-
-pre {
-	background: #000;
-	color: #fff;
-	padding: 15px;
-}
-
-hr {
-	border: 0;
-	width: 80%;
-	border-bottom: 1px solid #aaa
-}
-
 .footer {
 	text-align: center;
 	padding-top: 30px;
 	font-style: italic;
 }
 </style>
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29371966-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+</script>
 </head>
 
 <body>
@@ -77,7 +69,14 @@ hr {
 		<h1>
 			<a href="https://github.com/franklinefrancis/SvgCharts4Xsl">SvgCharts4Xsl</a>
 		</h1>
-		<p>SvgCharts4Xsl is a set of utility XSL templates to generate SVG charts. It can be used to embed dynamic charts in HTML and XSL-FO. It is written in XSLT 1.0, so it should work with almost all XSLs.</p>
+        <p><a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG or Scalable Vector Graphics</a> is a powerful way to render <a href="http://en.wikipedia.org/wiki/Vector_graphics">vector graphics</a> on screen and print media. Propelled by its adoption and availability of editors, it has become the de-facto standard for creating and publishing vector graphics.</p>
+        <p>SvgCharts4Xsl is a set of utility XSL templates, written in XSLT 1.0, for SVG charting. It can be used to embed SVG images in your HTML and PDF documents (via XSL-FO). If you want to convert the generated SVG to a raster format (JPEG/PNG/TIFF) from a Java application, consider using <a href="http://xmlgraphics.apache.org/batik/tools/rasterizer.html">Batik</a>.</p>
+        <p>Currently SvgCharts4Xsl supports the following types of charts:</p>
+        <ol>
+        <li><strong>Line Chart:</strong> Plots both positive and negative values.</li>
+        <li><strong>Bar Chart:</strong> Plots both positive and negative values.</li>
+        <li><strong>Pie Chart:</strong> Plots only positive values, negative values are discarded. Uses <a href="http://www.exslt.org">EXSLT</a> extensions to overcome the limitations of XPath 1.0, hence may not work with all transformers.</li>
+        </ol>
 		<h2>Usage</h2>
         <p>Import the respective chart XSL file in your stylesheet and call the appropriate method.</p>
         <h2>Download</h2>
