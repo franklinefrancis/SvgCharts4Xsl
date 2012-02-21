@@ -77,18 +77,446 @@ hr {
 		<h1>
 			<a href="https://github.com/franklinefrancis/SvgCharts4Xsl">SvgCharts4Xsl</a>
 		</h1>
-		<p>SvgCharts4Xsl is a set of utility XSL templates to generate SVG charts. It can be used to embed dynamic charts in HTML and XSL-FO.</p>
+		<p>SvgCharts4Xsl is a set of utility XSL templates to generate SVG charts. It can be used to embed dynamic charts in HTML and XSL-FO. It is written in XSLT 1.0, so it should work with almost all XSLs.</p>
 		<h2>Usage</h2>
-		<p>Import the respective chart XSL file in your stylesheet and call the appropriate method.</p>
-		<h2>License</h2>
-		<p>Open</p>
-		<h2>Contact</h2>
-		<p>Frankline Francis (franklinefrancis[at]yahoo.com) <br /></p>
-		<h2>Download</h2>
-		<p>You can download this project in either
-		<a ref="https://github.com/franklinefrancis/SvgCharts4Xsl/zipball/master">zip</a>or <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/tarball/master">tar formats.</a>
-		</p>
-		<p>You can also clone the project with <a href="http://git-scm.com">Git</a>	by running:</p><pre>$ git clone git://github.com/franklinefrancis/SvgCharts4Xsl</pre><p></p>
+        <p>Import the respective chart XSL file in your stylesheet and call the appropriate method.</p>
+        <h2>Download</h2>
+        <p>You can download this project in either
+        <a ref="https://github.com/franklinefrancis/SvgCharts4Xsl/zipball/master">zip</a>or <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/tarball/master">tar formats.</a>
+        </p>
+		<h2>Sample Outputs</h2>
+		<h3>Line Chart</h3>
+		<div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<circle r="1" cy="118" cx="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="120.5" x="15">0</text>
+		<line stroke-width="0.25" stroke="grey" y2="118" x2="360" y1="118" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="111.5" x="15">82</text>
+		<line stroke-width="0.25" stroke="grey" y2="109" x2="360" y1="109" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="102.5" x="15">164</text>
+		<line stroke-width="0.25" stroke="grey" y2="100" x2="360" y1="100" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="93.5" x="15">246</text>
+		<line stroke-width="0.25" stroke="grey" y2="91" x2="360" y1="91" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="83.5" x="15">328</text>
+		<line stroke-width="0.25" stroke="grey" y2="81" x2="360" y1="81" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="74.5" x="15">410</text>
+		<line stroke-width="0.25" stroke="grey" y2="72" x2="360" y1="72" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="65.5" x="15">492</text>
+		<line stroke-width="0.25" stroke="grey" y2="63" x2="360" y1="63" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="56.5" x="15">574</text>
+		<line stroke-width="0.25" stroke="grey" y2="54" x2="360" y1="54" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="47.5" x="15">656</text>
+		<line stroke-width="0.25" stroke="grey" y2="45" x2="360" y1="45" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="37.5" x="15">738</text>
+		<line stroke-width="0.25" stroke="grey" y2="35" x2="360" y1="35" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="28.5" x="15">820</text>
+		<line stroke-width="0.25" stroke="grey" y2="26" x2="360" y1="26" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="19.5" x="15">902</text>
+		<line stroke-width="0.25" stroke="grey" y2="17" x2="360" y1="17" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="10.5" x="15">984</text>
+		<line stroke-width="0.25" stroke="grey" y2="8" x2="360" y1="8" x1="20"/>
+		<g transform="translate(0 118) scale(1 -1)">
+		<line stroke-width="2" stroke="black" y2="118" x2="20" y1="0" x1="20"/>
+		</g>
+		<g transform="translate(0 118) scale(1 -1)">
+		<line stroke-width="1" stroke="black" y2="59.48372615039282" x2="42.5" y1="37.71043771043771" x1="27.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="37.71043771043771" cx="27.5"/>
+		<line stroke-width="1" stroke="black" y2="14.590347923681257" x2="57.5" y1="59.48372615039282" x1="42.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="59.48372615039282" cx="42.5"/>
+		<line stroke-width="1" stroke="black" y2="33.557800224466895" x2="72.5" y1="14.590347923681257" x1="57.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="14.590347923681257" cx="57.5"/>
+		<line stroke-width="1" stroke="black" y2="56.11672278338945" x2="87.5" y1="33.557800224466895" x1="72.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="33.557800224466895" cx="72.5"/>
+		<line stroke-width="1" stroke="black" y2="17.845117845117844" x2="102.5" y1="56.11672278338945" x1="87.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="56.11672278338945" cx="87.5"/>
+		<line stroke-width="1" stroke="black" y2="21.885521885521886" x2="117.5" y1="17.845117845117844" x1="102.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="17.845117845117844" cx="102.5"/>
+		<line stroke-width="1" stroke="black" y2="79.91021324354658" x2="132.5" y1="21.885521885521886" x1="117.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="21.885521885521886" cx="117.5"/>
+		<line stroke-width="1" stroke="black" y2="109.42760942760943" x2="147.5" y1="79.91021324354658" x1="132.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="79.91021324354658" cx="132.5"/>
+		<line stroke-width="1" stroke="black" y2="24.57912457912458" x2="162.5" y1="109.42760942760943" x1="147.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="109.42760942760943" cx="147.5"/>
+		<line stroke-width="1" stroke="black" y2="39.95510662177329" x2="177.5" y1="24.57912457912458" x1="162.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="24.57912457912458" cx="162.5"/>
+		<line stroke-width="1" stroke="black" y2="57.12682379349046" x2="192.5" y1="39.95510662177329" x1="177.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="39.95510662177329" cx="177.5"/>
+		<line stroke-width="1" stroke="black" y2="73.17620650953984" x2="207.5" y1="57.12682379349046" x1="192.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="57.12682379349046" cx="192.5"/>
+		<line stroke-width="1" stroke="black" y2="89.45005611672279" x2="222.5" y1="73.17620650953984" x1="207.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="73.17620650953984" cx="207.5"/>
+		<line stroke-width="1" stroke="black" y2="105.38720538720538" x2="237.5" y1="89.45005611672279" x1="222.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="89.45005611672279" cx="222.5"/>
+		<line stroke-width="1" stroke="black" y2="35.91470258136925" x2="252.5" y1="105.38720538720538" x1="237.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="105.38720538720538" cx="237.5"/>
+		<line stroke-width="1" stroke="black" y2="65.09539842873177" x2="267.5" y1="35.91470258136925" x1="252.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="35.91470258136925" cx="252.5"/>
+		<line stroke-width="1" stroke="black" y2="93.6026936026936" x2="282.5" y1="65.09539842873177" x1="267.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="65.09539842873177" cx="267.5"/>
+		<line stroke-width="1" stroke="black" y2="32.323232323232325" x2="297.5" y1="93.6026936026936" x1="282.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="93.6026936026936" cx="282.5"/>
+		<line stroke-width="1" stroke="black" y2="58.58585858585859" x2="312.5" y1="32.323232323232325" x1="297.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="32.323232323232325" cx="297.5"/>
+		<line stroke-width="1" stroke="black" y2="9.427609427609427" x2="327.5" y1="58.58585858585859" x1="312.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="58.58585858585859" cx="312.5"/>
+		<line stroke-width="1" stroke="black" y2="101.01010101010101" x2="342.5" y1="9.427609427609427" x1="327.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="9.427609427609427" cx="327.5"/>
+		<circle stroke-width="1" stroke="red" fill="white" r="1.5" cy="101.01010101010101" cx="342.5"/>
+		</g>
+		<g transform="translate(0 118)">
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="27.5" writing-mode="tb">ABC</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="42.5" writing-mode="tb">BDE</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="57.5" writing-mode="tb">CDE</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="72.5" writing-mode="tb">DEF</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="87.5" writing-mode="tb">EGH</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="102.5" writing-mode="tb">FGH</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="117.5" writing-mode="tb">GHI</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="132.5" writing-mode="tb">HIJ</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="147.5" writing-mode="tb">IJK</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="162.5" writing-mode="tb">JKL</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="177.5" writing-mode="tb">KLM</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="192.5" writing-mode="tb">LMN</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="207.5" writing-mode="tb">MNO</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="222.5" writing-mode="tb">NOP</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="237.5" writing-mode="tb">OPQ</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="252.5" writing-mode="tb">PQR</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="267.5" writing-mode="tb">QRS</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="282.5" writing-mode="tb">RST</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="297.5" writing-mode="tb">STU</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="312.5" writing-mode="tb">TUV</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="327.5" writing-mode="tb">VWX</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="342.5" writing-mode="tb">XYZ</text>
+		<line stroke-width="2" stroke="black" y2="0" x2="360" y1="0" x1="20"/>
+		</g>
+		</svg>
+		</div>
+		<div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<circle r="1" cy="57" cx="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="132.5" x="15">-120</text>
+		<line stroke-width="0.25" stroke="grey" y2="130" x2="285" y1="130" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="120.5" x="15">-100</text>
+		<line stroke-width="0.25" stroke="grey" y2="118" x2="285" y1="118" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="108.5" x="15">-80</text>
+		<line stroke-width="0.25" stroke="grey" y2="106" x2="285" y1="106" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="95.5" x="15">-60</text>
+		<line stroke-width="0.25" stroke="grey" y2="93" x2="285" y1="93" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="83.5" x="15">-40</text>
+		<line stroke-width="0.25" stroke="grey" y2="81" x2="285" y1="81" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="71.5" x="15">-20</text>
+		<line stroke-width="0.25" stroke="grey" y2="69" x2="285" y1="69" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="59.5" x="15">0</text>
+		<line stroke-width="0.25" stroke="grey" y2="57" x2="285" y1="57" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="47.5" x="15">20</text>
+		<line stroke-width="0.25" stroke="grey" y2="45" x2="285" y1="45" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="35.5" x="15">40</text>
+		<line stroke-width="0.25" stroke="grey" y2="33" x2="285" y1="33" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="23.5" x="15">60</text>
+		<line stroke-width="0.25" stroke="grey" y2="21" x2="285" y1="21" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="11.5" x="15">80</text>
+		<line stroke-width="0.25" stroke="grey" y2="9" x2="285" y1="9" x1="20"/>
+		<g transform="translate(0 24) scale(1 -1)">
+		<line stroke-width="2" stroke="black" y2="24" x2="20" y1="-112.12121212121212" x1="20"/>
+		</g>
+		<g transform="translate(0 57) scale(1 -1)">
+		<line stroke-width="1" stroke="blue" y2="12.121212121212121" x2="42.5" y1="18.181818181818183" x1="27.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="18.181818181818183" cx="27.5"/>
+		<line stroke-width="1" stroke="blue" y2="-34.54545454545455" x2="57.5" y1="12.121212121212121" x1="42.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="12.121212121212121" cx="42.5"/>
+		<line stroke-width="1" stroke="blue" y2="9.090909090909092" x2="72.5" y1="-34.54545454545455" x1="57.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="-34.54545454545455" cx="57.5"/>
+		<line stroke-width="1" stroke="blue" y2="11.515151515151516" x2="87.5" y1="9.090909090909092" x1="72.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="9.090909090909092" cx="72.5"/>
+		<line stroke-width="1" stroke="blue" y2="7.272727272727273" x2="102.5" y1="11.515151515151516" x1="87.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="11.515151515151516" cx="87.5"/>
+		<line stroke-width="1" stroke="blue" y2="-15.757575757575758" x2="117.5" y1="7.272727272727273" x1="102.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="7.272727272727273" cx="102.5"/>
+		<line stroke-width="1" stroke="blue" y2="17.575757575757578" x2="132.5" y1="-15.757575757575758" x1="117.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="-15.757575757575758" cx="117.5"/>
+		<line stroke-width="1" stroke="blue" y2="19.393939393939394" x2="147.5" y1="17.575757575757578" x1="132.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="17.575757575757578" cx="132.5"/>
+		<line stroke-width="1" stroke="blue" y2="-0.6060606060606061" x2="162.5" y1="19.393939393939394" x1="147.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="19.393939393939394" cx="147.5"/>
+		<line stroke-width="1" stroke="blue" y2="21.21212121212121" x2="177.5" y1="-0.6060606060606061" x1="162.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="-0.6060606060606061" cx="162.5"/>
+		<line stroke-width="1" stroke="blue" y2="39.3939393939394" x2="192.5" y1="21.21212121212121" x1="177.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="21.21212121212121" cx="177.5"/>
+		<line stroke-width="1" stroke="blue" y2="13.93939393939394" x2="207.5" y1="39.3939393939394" x1="192.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="39.3939393939394" cx="192.5"/>
+		<line stroke-width="1" stroke="blue" y2="6.0606060606060606" x2="222.5" y1="13.93939393939394" x1="207.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="13.93939393939394" cx="207.5"/>
+		<line stroke-width="1" stroke="blue" y2="-60.60606060606061" x2="237.5" y1="6.0606060606060606" x1="222.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="6.0606060606060606" cx="222.5"/>
+		<line stroke-width="1" stroke="blue" y2="13.333333333333334" x2="252.5" y1="-60.60606060606061" x1="237.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="-60.60606060606061" cx="237.5"/>
+		<line stroke-width="1" stroke="blue" y2="12.121212121212121" x2="267.5" y1="13.333333333333334" x1="252.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="13.333333333333334" cx="252.5"/>
+		<circle stroke-width="1" stroke="green" fill="white" r="1.5" cy="12.121212121212121" cx="267.5"/>
+		</g>
+		<g transform="translate(0 57)">
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="27.5" writing-mode="tb">ABCDE</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="42.5" writing-mode="tb">BCDEF</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="57.5" writing-mode="tb">CDEFG</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="72.5" writing-mode="tb">DEFGH</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="87.5" writing-mode="tb">EFGHI</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="102.5" writing-mode="tb">FGHIJ</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="117.5" writing-mode="tb">GHIJK</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="132.5" writing-mode="tb">HIJKL</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="147.5" writing-mode="tb">IJKLM</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="162.5" writing-mode="tb">JKLMN</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="177.5" writing-mode="tb">KLMNO</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="192.5" writing-mode="tb">LMNOP</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="207.5" writing-mode="tb">MNOPQ</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="222.5" writing-mode="tb">NOPQR</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="237.5" writing-mode="tb">OPQRS</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="252.5" writing-mode="tb">PQRST</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="267.5" writing-mode="tb">QRSTU</text>
+		<line stroke-width="2" stroke="black" y2="0" x2="285" y1="0" x1="20"/>
+		</g>
+		</svg>
+		</div>
+		<h3>Bar Chart</h3>
+		<div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<circle r="1" cy="118" cx="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="120.5" x="15">0</text>
+		<line stroke-width="0.25" stroke="grey" y2="118" x2="360" y1="118" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="111.5" x="15">82</text>
+		<line stroke-width="0.25" stroke="grey" y2="109" x2="360" y1="109" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="102.5" x="15">164</text>
+		<line stroke-width="0.25" stroke="grey" y2="100" x2="360" y1="100" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="93.5" x="15">246</text>
+		<line stroke-width="0.25" stroke="grey" y2="91" x2="360" y1="91" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="83.5" x="15">328</text>
+		<line stroke-width="0.25" stroke="grey" y2="81" x2="360" y1="81" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="74.5" x="15">410</text>
+		<line stroke-width="0.25" stroke="grey" y2="72" x2="360" y1="72" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="65.5" x="15">492</text>
+		<line stroke-width="0.25" stroke="grey" y2="63" x2="360" y1="63" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="56.5" x="15">574</text>
+		<line stroke-width="0.25" stroke="grey" y2="54" x2="360" y1="54" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="47.5" x="15">656</text>
+		<line stroke-width="0.25" stroke="grey" y2="45" x2="360" y1="45" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="37.5" x="15">738</text>
+		<line stroke-width="0.25" stroke="grey" y2="35" x2="360" y1="35" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="28.5" x="15">820</text>
+		<line stroke-width="0.25" stroke="grey" y2="26" x2="360" y1="26" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="19.5" x="15">902</text>
+		<line stroke-width="0.25" stroke="grey" y2="17" x2="360" y1="17" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="10.5" x="15">984</text>
+		<line stroke-width="0.25" stroke="grey" y2="8" x2="360" y1="8" x1="20"/>
+		<g transform="translate(0 118) scale(1 -1)">
+		<line stroke-width="2" stroke="black" y2="118" x2="20" y1="0" x1="20"/>
+		</g>
+		<g transform="translate(0 118) scale(1 -1)">
+		<rect stroke-width="1" stroke="black" fill="orangered" height="37" width="15" ry="2" rx="2" y="0" x="20"/>
+		<rect stroke-width="1" stroke="black" fill="navajowhite" height="59" width="15" ry="2" rx="2" y="0" x="35"/>
+		<rect stroke-width="1" stroke="black" fill="teal" height="14" width="15" ry="2" rx="2" y="0" x="50"/>
+		<rect stroke-width="1" stroke="black" fill="limegreen" height="33" width="15" ry="2" rx="2" y="0" x="65"/>
+		<rect stroke-width="1" stroke="black" fill="hotpink" height="56" width="15" ry="2" rx="2" y="0" x="80"/>
+		<rect stroke-width="1" stroke="black" fill="maroon" height="17" width="15" ry="2" rx="2" y="0" x="95"/>
+		<rect stroke-width="1" stroke="black" fill="steelblue" height="21" width="15" ry="2" rx="2" y="0" x="110"/>
+		<rect stroke-width="1" stroke="black" fill="olive" height="79" width="15" ry="2" rx="2" y="0" x="125"/>
+		<rect stroke-width="1" stroke="black" fill="gold" height="109" width="15" ry="2" rx="2" y="0" x="140"/>
+		<rect stroke-width="1" stroke="black" fill="yellow" height="24" width="15" ry="2" rx="2" y="0" x="155"/>
+		<rect stroke-width="1" stroke="black" fill="yellowgreen" height="39" width="15" ry="2" rx="2" y="0" x="170"/>
+		<rect stroke-width="1" stroke="black" fill="red" height="57" width="15" ry="2" rx="2" y="0" x="185"/>
+		<rect stroke-width="1" stroke="black" fill="wheat" height="73" width="15" ry="2" rx="2" y="0" x="200"/>
+		<rect stroke-width="1" stroke="black" fill="darkgreen" height="89" width="15" ry="2" rx="2" y="0" x="215"/>
+		<rect stroke-width="1" stroke="black" fill="brown" height="105" width="15" ry="2" rx="2" y="0" x="230"/>
+		<rect stroke-width="1" stroke="black" fill="olivedrab" height="35" width="15" ry="2" rx="2" y="0" x="245"/>
+		<rect stroke-width="1" stroke="black" fill="darkblue" height="65" width="15" ry="2" rx="2" y="0" x="260"/>
+		<rect stroke-width="1" stroke="black" fill="firebrick" height="93" width="15" ry="2" rx="2" y="0" x="275"/>
+		<rect stroke-width="1" stroke="black" fill="gray" height="32" width="15" ry="2" rx="2" y="0" x="290"/>
+		<rect stroke-width="1" stroke="black" fill="violet" height="58" width="15" ry="2" rx="2" y="0" x="305"/>
+		<rect stroke-width="1" stroke="black" fill="orangered" height="9" width="15" ry="2" rx="2" y="0" x="320"/>
+		<rect stroke-width="1" stroke="black" fill="navajowhite" height="101" width="15" ry="2" rx="2" y="0" x="335"/>
+		</g>
+		<g transform="translate(0 118)">
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="27.5" writing-mode="tb">ABC</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="42.5" writing-mode="tb">BDE</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="57.5" writing-mode="tb">CDE</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="72.5" writing-mode="tb">DEF</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="87.5" writing-mode="tb">EGH</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="102.5" writing-mode="tb">FGH</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="117.5" writing-mode="tb">GHI</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="132.5" writing-mode="tb">HIJ</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="147.5" writing-mode="tb">IJK</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="162.5" writing-mode="tb">JKL</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="177.5" writing-mode="tb">KLM</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="192.5" writing-mode="tb">LMN</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="207.5" writing-mode="tb">MNO</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="222.5" writing-mode="tb">NOP</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="237.5" writing-mode="tb">OPQ</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="252.5" writing-mode="tb">PQR</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="267.5" writing-mode="tb">QRS</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="282.5" writing-mode="tb">RST</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="297.5" writing-mode="tb">STU</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="312.5" writing-mode="tb">TUV</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="327.5" writing-mode="tb">VWX</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="342.5" writing-mode="tb">XYZ</text>
+		<line stroke-width="2" stroke="black" y2="0" x2="360" y1="0" x1="20"/>
+		</g>
+		</svg>
+		</div>
+		<div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<circle r="1" cy="57" cx="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="132.5" x="15">-120</text>
+		<line stroke-width="0.25" stroke="grey" y2="130" x2="285" y1="130" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="120.5" x="15">-100</text>
+		<line stroke-width="0.25" stroke="grey" y2="118" x2="285" y1="118" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="108.5" x="15">-80</text>
+		<line stroke-width="0.25" stroke="grey" y2="106" x2="285" y1="106" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="95.5" x="15">-60</text>
+		<line stroke-width="0.25" stroke="grey" y2="93" x2="285" y1="93" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="83.5" x="15">-40</text>
+		<line stroke-width="0.25" stroke="grey" y2="81" x2="285" y1="81" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="71.5" x="15">-20</text>
+		<line stroke-width="0.25" stroke="grey" y2="69" x2="285" y1="69" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="59.5" x="15">0</text>
+		<line stroke-width="0.25" stroke="grey" y2="57" x2="285" y1="57" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="47.5" x="15">20</text>
+		<line stroke-width="0.25" stroke="grey" y2="45" x2="285" y1="45" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="35.5" x="15">40</text>
+		<line stroke-width="0.25" stroke="grey" y2="33" x2="285" y1="33" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="23.5" x="15">60</text>
+		<line stroke-width="0.25" stroke="grey" y2="21" x2="285" y1="21" x1="20"/>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="11.5" x="15">80</text>
+		<line stroke-width="0.25" stroke="grey" y2="9" x2="285" y1="9" x1="20"/>
+		<g transform="translate(0 24) scale(1 -1)">
+		<line stroke-width="2" stroke="black" y2="24" x2="20" y1="-112.12121212121212" x1="20"/>
+		</g>
+		<g transform="translate(0 57) scale(1 -1)">
+		<rect stroke-width="1" stroke="black" fill="orangered" height="18" width="15" ry="2" rx="2" y="0" x="20"/>
+		<rect stroke-width="1" stroke="black" fill="navajowhite" height="12" width="15" ry="2" rx="2" y="0" x="35"/>
+		<rect stroke-width="1" stroke="black" fill="teal" height="35" width="15" ry="2" rx="2" y="-34.54545454545455" x="50"/>
+		<rect stroke-width="1" stroke="black" fill="limegreen" height="9" width="15" ry="2" rx="2" y="0" x="65"/>
+		<rect stroke-width="1" stroke="black" fill="hotpink" height="11" width="15" ry="2" rx="2" y="0" x="80"/>
+		<rect stroke-width="1" stroke="black" fill="maroon" height="7" width="15" ry="2" rx="2" y="0" x="95"/>
+		<rect stroke-width="1" stroke="black" fill="steelblue" height="16" width="15" ry="2" rx="2" y="-15.757575757575758" x="110"/>
+		<rect stroke-width="1" stroke="black" fill="olive" height="17" width="15" ry="2" rx="2" y="0" x="125"/>
+		<rect stroke-width="1" stroke="black" fill="gold" height="19" width="15" ry="2" rx="2" y="0" x="140"/>
+		<rect stroke-width="1" stroke="black" fill="yellow" height="1" width="15" ry="2" rx="2" y="-0.6060606060606061" x="155"/>
+		<rect stroke-width="1" stroke="black" fill="yellowgreen" height="21" width="15" ry="2" rx="2" y="0" x="170"/>
+		<rect stroke-width="1" stroke="black" fill="red" height="39" width="15" ry="2" rx="2" y="0" x="185"/>
+		<rect stroke-width="1" stroke="black" fill="wheat" height="13" width="15" ry="2" rx="2" y="0" x="200"/>
+		<rect stroke-width="1" stroke="black" fill="darkgreen" height="6" width="15" ry="2" rx="2" y="0" x="215"/>
+		<rect stroke-width="1" stroke="black" fill="brown" height="61" width="15" ry="2" rx="2" y="-60.60606060606061" x="230"/>
+		<rect stroke-width="1" stroke="black" fill="olivedrab" height="13" width="15" ry="2" rx="2" y="0" x="245"/>
+		<rect stroke-width="1" stroke="black" fill="darkblue" height="12" width="15" ry="2" rx="2" y="0" x="260"/>
+		</g>
+		<g transform="translate(0 57)">
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="27.5" writing-mode="tb">ABCDE</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="42.5" writing-mode="tb">BCDEF</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="57.5" writing-mode="tb">CDEFG</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="72.5" writing-mode="tb">DEFGH</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="87.5" writing-mode="tb">EFGHI</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="102.5" writing-mode="tb">FGHIJ</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="117.5" writing-mode="tb">GHIJK</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="132.5" writing-mode="tb">HIJKL</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="147.5" writing-mode="tb">IJKLM</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="162.5" writing-mode="tb">JKLMN</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="177.5" writing-mode="tb">KLMNO</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="192.5" writing-mode="tb">LMNOP</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="207.5" writing-mode="tb">MNOPQ</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="222.5" writing-mode="tb">NOPQR</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="237.5" writing-mode="tb">OPQRS</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="252.5" writing-mode="tb">PQRST</text>
+		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" dy="5" x="267.5" writing-mode="tb">QRSTU</text>
+		<line stroke-width="2" stroke="black" y2="0" x2="285" y1="0" x1="20"/>
+		</g>
+		</svg>
+        </div>
+		<h3>Pie Chart</h3>
+		<div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<path d="M 50 0 A 50 50 0 0 1 42.22057081788772 26.78476058903137 L 0 0 Z" transform="translate(60 60) rotate(270)" stroke-width="1" stroke="white" fill="orangered"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="10.185151823400613" y="-33.48526067293309">9%</text>
+		<path d="M 50 0 A 50 50 0 0 1 42.770431020467534 25.89768774086652 L 0 0 Z" transform="translate(60 60) rotate(302.3920265780731)" stroke-width="1" stroke="white" fill="navajowhite"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="26.33404581865274" y="-23.054674814906793">9%</text>
+		<path d="M 50 0 A 50 50 0 0 1 43.345076532608815 24.923971200077343 L 0 0 Z" transform="translate(60 60) rotate(333.5880398671096)" stroke-width="1" stroke="white" fill="teal"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="34.406158926127226" y="-6.41998660045922">8%</text>
+		<path d="M 50 0 A 50 50 0 0 1 44.2669127989628 23.247374717353004 L 0 0 Z" transform="translate(60 60) rotate(363.48837209302326)" stroke-width="1" stroke="white" fill="limegreen"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="33.22710361226835" y="10.998162825653354">8%</text>
+		<path d="M 50 0 A 50 50 0 0 1 44.75542730231189 22.29241411304472 L 0 0 Z" transform="translate(60 60) rotate(391.19601328903656)" stroke-width="1" stroke="white" fill="hotpink"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="24.53978700087859" y="24.955938250274432">7%</text>
+		<path d="M 50 0 A 50 50 0 0 1 45.79932455740742 20.06045538080474 L 0 0 Z" transform="translate(60 60) rotate(417.6744186046511)" stroke-width="1" stroke="white" fill="maroon"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="11.614652248608166" y="33.0166602360672">7%</text>
+		<path d="M 50 0 A 50 50 0 0 1 46.469365787107186 18.455298516795448 L 0 0 Z" transform="translate(60 60) rotate(441.32890365448503)" stroke-width="1" stroke="white" fill="steelblue"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-2.0392611447813174" y="34.94054112321939">6%</text>
+		<path d="M 50 0 A 50 50 0 0 1 47.199115944538725 16.49980163680736 L 0 0 Z" transform="translate(60 60) rotate(462.99003322259136)" stroke-width="1" stroke="white" fill="olive"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-14.159471503192773" y="32.00795786597876">5%</text>
+		<path d="M 50 0 A 50 50 0 0 1 -42.28010645643092 26.690683731086178 L 0 0 Z" transform="translate(60 60) rotate(482.25913621262464)" stroke-width="1" stroke="white" fill="gold"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-33.39512480464968" y="-10.476909815488124">41%</text>
+		<rect stroke-width="0.5" stroke="black" fill="orangered" height="5" width="10" ry="1" rx="1" y="10" x="125"/>
+		<text font-size="5" font-family="Arial" y="14" x="140" text-anchor="start">IJK (975)</text>
+		<rect stroke-width="0.5" stroke="black" fill="navajowhite" height="5" width="10" ry="1" rx="1" y="18" x="125"/>
+		<text font-size="5" font-family="Arial" y="22" x="140" text-anchor="start">OPQ (939)</text>
+		<rect stroke-width="0.5" stroke="black" fill="teal" height="5" width="10" ry="1" rx="1" y="26" x="125"/>
+		<text font-size="5" font-family="Arial" y="30" x="140" text-anchor="start">XYZ (900)</text>
+		<rect stroke-width="0.5" stroke="black" fill="limegreen" height="5" width="10" ry="1" rx="1" y="34" x="125"/>
+		<text font-size="5" font-family="Arial" y="38" x="140" text-anchor="start">RST (834)</text>
+		<rect stroke-width="0.5" stroke="black" fill="hotpink" height="5" width="10" ry="1" rx="1" y="42" x="125"/>
+		<text font-size="5" font-family="Arial" y="46" x="140" text-anchor="start">NOP (797)</text>
+		<rect stroke-width="0.5" stroke="black" fill="maroon" height="5" width="10" ry="1" rx="1" y="50" x="125"/>
+		<text font-size="5" font-family="Arial" y="54" x="140" text-anchor="start">HIJ (712)</text>
+		<rect stroke-width="0.5" stroke="black" fill="steelblue" height="5" width="10" ry="1" rx="1" y="58" x="125"/>
+		<text font-size="5" font-family="Arial" y="62" x="140" text-anchor="start">MNO (652)</text>
+		<rect stroke-width="0.5" stroke="black" fill="olive" height="5" width="10" ry="1" rx="1" y="66" x="125"/>
+		<text font-size="5" font-family="Arial" y="70" x="140" text-anchor="start">QRS (580)</text>
+		<rect stroke-width="0.5" stroke="black" fill="gold" height="5" width="10" ry="1" rx="1" y="74" x="125"/>
+		<text font-size="5" font-family="Arial" y="78" x="140" text-anchor="start">Others (4447)</text>
+		</svg>
+		</div>
+		<div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<path d="M 50 0 A 50 50 0 0 1 16.706918325406626 47.12620162996581 L 0 0 Z" transform="translate(60 60) rotate(270)" stroke-width="1" stroke="white" fill="orangered"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="20.55393836237923" y="-28.32905959956164">20%</text>
+		<path d="M 50 0 A 50 50 0 0 1 39.42701678088496 30.749151984401387 L 0 0 Z" transform="translate(60 60) rotate(340.48192771084337)" stroke-width="1" stroke="white" fill="navajowhite"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="34.999276318951445" y="0.22507143240397554">11%</text>
+		<path d="M 50 0 A 50 50 0 0 1 41.10830895591484 28.462377532192413 L 0 0 Z" transform="translate(60 60) rotate(378.43373493975906)" stroke-width="1" stroke="white" fill="teal"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="28.027294650369257" y="20.963557774895524">10%</text>
+		<path d="M 50 0 A 50 50 0 0 1 42.15589371080089 26.88643943410242 L 0 0 Z" transform="translate(60 60) rotate(413.13253012048193)" stroke-width="1" stroke="white" fill="limegreen"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="11.681678553710544" y="32.99300510968619">9%</text>
+		<path d="M 50 0 A 50 50 0 0 1 42.65713238798709 26.083884995026 L 0 0 Z" transform="translate(60 60) rotate(445.66265060240966)" stroke-width="1" stroke="white" fill="hotpink"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-7.621739372369483" y="34.16005106757999">9%</text>
+		<path d="M 50 0 A 50 50 0 0 1 45.33785206323163 21.08267464750438 L 0 0 Z" transform="translate(60 60) rotate(477.1084337349398)" stroke-width="1" stroke="white" fill="maroon"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-22.895030678407757" y="26.47295922700686">7%</text>
+		<path d="M 50 0 A 50 50 0 0 1 45.728693012937086 20.2209454607978 L 0 0 Z" transform="translate(60 60) rotate(502.04819277108436)" stroke-width="1" stroke="white" fill="steelblue"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-31.802660898170274" y="14.61474460248936">7%</text>
+		<path d="M 50 0 A 50 50 0 0 1 46.461109868710395 18.476072898958314 L 0 0 Z" transform="translate(60 60) rotate(525.9036144578313)" stroke-width="1" stroke="white" fill="olive"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-34.981836895446364" y="1.1274251285064434">6%</text>
+		<path d="M 50 0 A 50 50 0 0 1 46.461109868710395 18.476072898958314 L 0 0 Z" transform="translate(60 60) rotate(547.5903614457832)" stroke-width="1" stroke="white" fill="gold"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-32.910324713689384" y="-11.912620502623504">6%</text>
+		<path d="M 50 0 A 50 50 0 0 1 46.8024234717401 17.59355442120528 L 0 0 Z" transform="translate(60 60) rotate(569.277108433735)" stroke-width="1" stroke="white" fill="yellow"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-26.374126197821166" y="-23.008812818166067">6%</text>
+		<path d="M 50 0 A 50 50 0 0 1 38.2352200175338 32.219061907677926 L 0 0 Z" transform="translate(60 60) rotate(589.8795180722891)" stroke-width="1" stroke="white" fill="yellowgreen"/>
+		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="-11.095369211059072" y="-33.19477040243361">11%</text>
+		<rect stroke-width="0.5" stroke="black" fill="orangered" height="5" width="10" ry="1" rx="1" y="10" x="125"/>
+		<text font-size="5" font-family="Arial" y="14" x="140" text-anchor="start">LMNOP (65)</text>
+		<rect stroke-width="0.5" stroke="black" fill="navajowhite" height="5" width="10" ry="1" rx="1" y="18" x="125"/>
+		<text font-size="5" font-family="Arial" y="22" x="140" text-anchor="start">KLMNO (35)</text>
+		<rect stroke-width="0.5" stroke="black" fill="teal" height="5" width="10" ry="1" rx="1" y="26" x="125"/>
+		<text font-size="5" font-family="Arial" y="30" x="140" text-anchor="start">IJKLM (32)</text>
+		<rect stroke-width="0.5" stroke="black" fill="limegreen" height="5" width="10" ry="1" rx="1" y="34" x="125"/>
+		<text font-size="5" font-family="Arial" y="38" x="140" text-anchor="start">ABCDE (30)</text>
+		<rect stroke-width="0.5" stroke="black" fill="hotpink" height="5" width="10" ry="1" rx="1" y="42" x="125"/>
+		<text font-size="5" font-family="Arial" y="46" x="140" text-anchor="start">HIJKL (29)</text>
+		<rect stroke-width="0.5" stroke="black" fill="maroon" height="5" width="10" ry="1" rx="1" y="50" x="125"/>
+		<text font-size="5" font-family="Arial" y="54" x="140" text-anchor="start">MNOPQ (23)</text>
+		<rect stroke-width="0.5" stroke="black" fill="steelblue" height="5" width="10" ry="1" rx="1" y="58" x="125"/>
+		<text font-size="5" font-family="Arial" y="62" x="140" text-anchor="start">PQRST (22)</text>
+		<rect stroke-width="0.5" stroke="black" fill="olive" height="5" width="10" ry="1" rx="1" y="66" x="125"/>
+		<text font-size="5" font-family="Arial" y="70" x="140" text-anchor="start">BCDEF (20)</text>
+		<rect stroke-width="0.5" stroke="black" fill="gold" height="5" width="10" ry="1" rx="1" y="74" x="125"/>
+		<text font-size="5" font-family="Arial" y="78" x="140" text-anchor="start">QRSTU (20)</text>
+		<rect stroke-width="0.5" stroke="black" fill="yellow" height="5" width="10" ry="1" rx="1" y="82" x="125"/>
+		<text font-size="5" font-family="Arial" y="86" x="140" text-anchor="start">EFGHI (19)</text>
+		<rect stroke-width="0.5" stroke="black" fill="yellowgreen" height="5" width="10" ry="1" rx="1" y="90" x="125"/>
+		<text font-size="5" font-family="Arial" y="94" x="140" text-anchor="start">Others (37)</text>
+		</svg>
+		</div>
 		<div class="footer">Get the source code on GitHub : <a href="https://github.com/franklinefrancis/SvgCharts4Xsl">franklinefrancis/SvgCharts4Xsl</a></div>
 	</div>
 </body>
