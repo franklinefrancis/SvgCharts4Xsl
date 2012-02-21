@@ -1,99 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
+<meta name="keywords" content="SVG, XSLT, XSL, Charts, Pie Chart, Bar Chart, Line Chart" />
+<meta name="description" content="SVG charting utility for XSL 1.0" />
+<title>SvgCharts4Xsl</title>
+<style type="text/css">
+body {
+	margin-top: 1.0em;
+	background-color: #5c94bf;
+	font-family: Helvetica, Arial, FreeSans, san-serif;
+	color: #000000;
+}
 
-  <title>franklinefrancis/SvgCharts4Xsl @ GitHub</title>
+#container {
+	margin: 0 auto;
+	width: 700px;
+}
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #5c94bf;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #a36b40; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #a36b40; }
-    h3 { text-align: center; color: #a36b40; }
-    a { color: #a36b40; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+h1 {
+	font-size: 3.8em;
+	color: #a36b40;
+	margin-bottom: 3px;
+}
+
+h1 .small {
+	font-size: 0.4em;
+}
+
+h1 a {
+	text-decoration: none
+}
+
+h2 {
+	font-size: 1.5em;
+	color: #a36b40;
+}
+
+h3 {
+	text-align: center;
+	color: #a36b40;
+}
+
+a {
+	color: #a36b40;
+}
+
+.description {
+	font-size: 1.2em;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	font-style: italic;
+}
+
+pre {
+	background: #000;
+	color: #fff;
+	padding: 15px;
+}
+
+hr {
+	border: 0;
+	width: 80%;
+	border-bottom: 1px solid #aaa
+}
+
+.footer {
+	text-align: center;
+	padding-top: 30px;
+	font-style: italic;
+}
+</style>
 </head>
 
 <body>
-  <a href="https://github.com/franklinefrancis/SvgCharts4Xsl"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/franklinefrancis/SvgCharts4Xsl">SvgCharts4Xsl</a>
-      <span class="small">by <a href="https://github.com/franklinefrancis">franklinefrancis</a></span></h1>
-
-    <div class="description">
-      Utility XSL templates to generate SVG charts. Can be used to embed dynamic charts in HTML and XSL-FO.
-    </div>
-
-    
-      <p>Utility XSL templates to generate SVG charts. Can be used to embed dynamic charts in HTML and XSL-FO.</p>
-    
-
-    
-      <h2>Dependencies</h2>
-      <p>Piechart requires the transformer to support EXSLT extensions</p>
-    
-
-    
-      <h2>Install</h2>
-      <p>Import the respective chart XSL file in your stylesheet and call the appropriate method.</p>
-    
-
-    
-      <h2>License</h2>
-      <p>Open</p>
-    
-
-    
-      <h2>Authors</h2>
-      <p>Frankline Francis (franklinefrancis[at]yahoo.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Frankline Francis (franklinefrancis[at]yahoo.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/zipball/master">zip</a> or
-      <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/franklinefrancis/SvgCharts4Xsl</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/franklinefrancis/SvgCharts4Xsl">franklinefrancis/SvgCharts4Xsl</a>
-    </div>
-
-  </div>
-
+	<div id="container">
+		<h1>
+			<a href="https://github.com/franklinefrancis/SvgCharts4Xsl">SvgCharts4Xsl</a>
+		</h1>
+		<p>SvgCharts4Xsl is a set of utility XSL templates to generate SVG charts. It can be used to embed dynamic charts in HTML and XSL-FO.</p>
+		<h2>Usage</h2>
+		<p>Import the respective chart XSL file in your stylesheet and call the appropriate method.</p>
+		<h2>License</h2>
+		<p>Open</p>
+		<h2>Contact</h2>
+		<p>Frankline Francis (franklinefrancis[at]yahoo.com) <br /></p>
+		<h2>Download</h2>
+		<p>You can download this project in either
+		<a ref="https://github.com/franklinefrancis/SvgCharts4Xsl/zipball/master">zip</a>or <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/tarball/master">tar formats.</a>
+		</p>
+		<p>You can also clone the project with <a href="http://git-scm.com">Git</a>	by running:</p><pre>$ git clone git://github.com/franklinefrancis/SvgCharts4Xsl</pre><p></p>
+		<div class="footer">Get the source code on GitHub : <a href="https://github.com/franklinefrancis/SvgCharts4Xsl">franklinefrancis/SvgCharts4Xsl</a></div>
+	</div>
 </body>
 </html>
