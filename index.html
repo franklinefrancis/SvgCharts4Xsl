@@ -66,9 +66,7 @@ a {
 
 <body>
 	<div id="container">
-		<h1>
-			<a href="https://github.com/franklinefrancis/SvgCharts4Xsl">SvgCharts4Xsl</a>
-		</h1>
+		<h1>SvgCharts4Xsl</h1>
         <p><a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG or Scalable Vector Graphics</a> is a powerful way to render <a href="http://en.wikipedia.org/wiki/Vector_graphics">vector graphics</a> on screen and print media. Propelled by its adoption and availability of editors, it has become the de-facto standard for creating and publishing vector graphics.</p>
         <p>SvgCharts4Xsl is a set of utility XSL templates, written in XSLT 1.0, for SVG charting. It can be used to embed SVG images in your HTML and PDF documents (via XSL-FO). If you want to convert the generated SVG to a raster format (JPEG/PNG/TIFF) from a Java application, consider using <a href="http://xmlgraphics.apache.org/batik/tools/rasterizer.html">Batik</a>.</p>
         <p>Currently SvgCharts4Xsl supports the following types of charts:</p>
@@ -78,15 +76,16 @@ a {
         <li><strong>Pie Chart:</strong> Plots only positive values, negative values are discarded. Uses <a href="http://www.exslt.org">EXSLT</a> extensions to overcome the limitations of XPath 1.0, hence may not work with all transformers.</li>
         </ol>
 		<h2>Usage</h2>
-        <p>Import the respective chart XSL file in your stylesheet and call the appropriate method.</p>
+        <p>Import/include the respective chart XSL file in your stylesheet and call the appropriate method with required arguments (some are optional). For generating standalone SVG files, use appropriate DOCTYPE tag as shown in the examples.</p>
         <h2>Download</h2>
         <p>You can download this project in either
-        <a ref="https://github.com/franklinefrancis/SvgCharts4Xsl/zipball/master">zip</a>or <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/tarball/master">tar formats.</a>
+        <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/zipball/master">zip</a>or <a href="https://github.com/franklinefrancis/SvgCharts4Xsl/tarball/master">tar</a> formats.
         </p>
 		<h2>Sample Outputs</h2>
+		<p><i>Shows up correctly only on SVG 1.1 compliant browser (E.g: Google Chrome)</i></p>
 		<h3>Line Chart</h3>
 		<div>
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" preserveAspectRatio="xMinYMid" height="240px" width="640px" version="1.1">
 		<circle r="1" cy="118" cx="20"/>
 		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="120.5" x="15">0</text>
 		<line stroke-width="0.25" stroke="grey" y2="118" x2="360" y1="118" x1="20"/>
@@ -190,7 +189,7 @@ a {
 		</svg>
 		</div>
 		<div>
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" preserveAspectRatio="xMinYMid" height="240px" width="640px" version="1.1">
 		<circle r="1" cy="57" cx="20"/>
 		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="132.5" x="15">-120</text>
 		<line stroke-width="0.25" stroke="grey" y2="130" x2="285" y1="130" x1="20"/>
@@ -276,7 +275,7 @@ a {
 		</div>
 		<h3>Bar Chart</h3>
 		<div>
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" preserveAspectRatio="xMinYMid" height="240px" width="640px" version="1.1">
 		<circle r="1" cy="118" cx="20"/>
 		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="120.5" x="15">0</text>
 		<line stroke-width="0.25" stroke="grey" y2="118" x2="360" y1="118" x1="20"/>
@@ -359,7 +358,7 @@ a {
 		</svg>
 		</div>
 		<div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" preserveAspectRatio="xMinYMid" height="240px" width="640px" version="1.1">
 		<circle r="1" cy="57" cx="20"/>
 		<text font-size="5" font-weight="bold" font-family="Arial" fill="black" text-anchor="end" y="132.5" x="15">-120</text>
 		<line stroke-width="0.25" stroke="grey" y2="130" x2="285" y1="130" x1="20"/>
@@ -429,7 +428,7 @@ a {
         </div>
 		<h3>Pie Chart</h3>
 		<div>
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" preserveAspectRatio="xMinYMid" height="240px" width="640px" version="1.1">
 		<path d="M 50 0 A 50 50 0 0 1 42.22057081788772 26.78476058903137 L 0 0 Z" transform="translate(60 60) rotate(270)" stroke-width="1" stroke="white" fill="orangered"/>
 		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="10.185151823400613" y="-33.48526067293309">9%</text>
 		<path d="M 50 0 A 50 50 0 0 1 42.770431020467534 25.89768774086652 L 0 0 Z" transform="translate(60 60) rotate(302.3920265780731)" stroke-width="1" stroke="white" fill="navajowhite"/>
@@ -469,7 +468,7 @@ a {
 		</svg>
 		</div>
 		<div>
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 50" preserveAspectRatio="xMinYMid" height="480px" width="640px" version="1.1">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" preserveAspectRatio="xMinYMid" height="240px" width="640px" version="1.1">
 		<path d="M 50 0 A 50 50 0 0 1 16.706918325406626 47.12620162996581 L 0 0 Z" transform="translate(60 60) rotate(270)" stroke-width="1" stroke="white" fill="orangered"/>
 		<text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="20.55393836237923" y="-28.32905959956164">20%</text>
 		<path d="M 50 0 A 50 50 0 0 1 39.42701678088496 30.749151984401387 L 0 0 Z" transform="translate(60 60) rotate(340.48192771084337)" stroke-width="1" stroke="white" fill="navajowhite"/>
@@ -516,7 +515,8 @@ a {
 		<text font-size="5" font-family="Arial" y="94" x="140" text-anchor="start">Others (37)</text>
 		</svg>
 		</div>
-		<div class="footer">Get the source code on GitHub : <a href="https://github.com/franklinefrancis/SvgCharts4Xsl">franklinefrancis/SvgCharts4Xsl</a></div>
+		<hr />
+		<div class="footer">Get the source code on GitHub: <a href="https://github.com/franklinefrancis/SvgCharts4Xsl">franklinefrancis/SvgCharts4Xsl</a></div>
 	</div>
 </body>
 </html>
