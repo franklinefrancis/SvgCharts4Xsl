@@ -56,7 +56,7 @@ Redistribution and use, with or without modification, are permitted provided tha
             </xsl:choose>
 		</xsl:variable>
 
-		<svg:svg version="1.1" width="{$width}" height="{$height}" preserveAspectRatio="xMinYMin" viewBox="0 0 {$viewBoxWidth} {$viewBoxHeight}"
+		<svg:svg version="1.1" width="{$width}" height="{$height}" preserveAspectRatio="xMinYMid" viewBox="0 0 {$viewBoxWidth} {$viewBoxHeight}"
 		    xmlns:svg="http://www.w3.org/2000/svg">
 			<xsl:if test="$xCount &gt; 0 and $yCount &gt; 0">
 				<xsl:variable name="_aggregatedData">
