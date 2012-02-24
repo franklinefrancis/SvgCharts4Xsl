@@ -199,7 +199,7 @@
 </fo:block>
 <fo:block>
 <fo:instream-foreign-object>
-<svg:svg xmlns:svg="http://www.w3.org/2000/svg" xmlns:exsl="http://exslt.org/common" xmlns:math="http://exslt.org/math" viewBox="0 0 300 300" preserveAspectRatio="xMinYMid" height="9cm" width="15cm" version="1.1">
+<svg:svg xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMinYMid" height="9cm" width="15cm" version="1.1">
 <svg:path d="M 50 0 A 50 50 0 0 1 42.22057081788772 26.78476058903137 L 0 0 Z" transform="translate(60 60) rotate(270)" stroke-width="1" stroke="white" fill="orangered"/>
 <svg:text font-size="5" font-family="Arial" transform="translate(60 60)" fill="black" text-anchor="middle" x="10.185151823400613" y="-33.48526067293309">9%</svg:text>
 <svg:path d="M 50 0 A 50 50 0 0 1 42.770431020467534 25.89768774086652 L 0 0 Z" transform="translate(60 60) rotate(302.3920265780731)" stroke-width="1" stroke="white" fill="navajowhite"/>

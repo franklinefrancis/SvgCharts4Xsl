@@ -17,7 +17,7 @@ Redistribution and use, with or without modification, are permitted provided tha
       this software without specific prior written permission.
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:math="http://exslt.org/math" xmlns:exsl="http://exslt.org/common">
+    xmlns:math="http://exslt.org/math" xmlns:exsl="http://exslt.org/common" exclude-result-prefixes="exsl math">
 	<xsl:import href="common.xsl" />
 
 	<!-- Constants -->
